@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Databases - Explore</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<style>.searchbox input {
+    width: 100%
+}
+
+.browse-queries {
+    padding: 18px;
+}
+
+.browse-queries .wrapper {
+    display: flex;
+}
+
+.browse-queries .content {
+    width: 100%;
+}
+
+.browse-queries h1 {
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.browse-queries a p {
+    margin-bottom: 0px;
+}
+
+.browse-queries h1, .browse-queries a p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.browse-queries .bottom {
+    margin-top: 11px;
+}
+
+.browse-queries .bottom .vote {
+    font-weight: 700;
+}
+
+.browse-categories .card {
+    margin-bottom: 3rem;
+}
+
+.browse-categories a {
+    height: 125px;
+    display: block;
+    position: relative;
+}
+
+.browse-categories a img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.browse-categories a span {
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#tags a {
+    margin-bottom: 5px;
+}
+</style>
+<style>#category-banner {
+    background: url(/static/img/categories/databases/databases.jpg) no-repeat center;
+    background-size: 100% auto;
+    height: 200px;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div id="category-banner" class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+</div>
+</div>
+</div>
+<div class="container category"><br />
+<div class="row">
+<div class="twelve columns">
+<h3 class="heading-highlight"><span>Databases</span>
+</h3>
+</div>
+</div>
+<div class="row">
+<div class="eight columns">
+<h6 class="grid-heading"><span>Technologies</span>
+</h6>
+<div class="card card-padding">
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/databases/mysql.jpg" alt="MySQL" />
+<p>MySQL is an open-source relational database management system. It is a popular choice of database for use in web applications, and is a central component of the widely used LAMP open-source web application software stack.</p><a href="/search?query=product%3AMySQL" class="button">Explore MySQL</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/databases/postgresql.png" alt="PostgreSQL" />
+<p>PostgreSQL, often simply Postgres, is an ORDBMS with an emphasis on extensibility and standards-compliance. It can handle workloads ranging from small single-machine applications to large Internet-facing applications with many concurrent users.</p><a href="/search?query=product%3APostgreSQL" class="button">Explore PostgreSQL</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/databases/mongodb.jpg" alt="MongoDB" />
+<p>MongoDB is a document-oriented database that is classified as a NoSQL database. It eschews the traditional table-based relational database structure in favor of JSON-like documents with dynamic schemas.</p><a href="/search?query=product%3AMongoDB" class="button">Explore MongoDB</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/databases/riak.png" alt="Riak" />
+<p>Riak is a distributed NoSQL key-value data store that offers high availability, fault tolerance, operational simplicity, and scalability. In addition to the open-source version, it comes in a supported enterprise version and a cloud storage version.</p><a href="/search?query=product%3ARiak" class="button">Explore Riak</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/databases/elastic.png" alt="Elastic" />
+<p>Elastic is a NoSQL database and search server based on Lucene. It provides a distributed, multitenant-capable full-text search engine with an HTTP web interface and schema-free JSON documents.</p><a href="/search?query=product%3AElastic" class="button">Explore Elastic</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/databases/redis.png" alt="Redis" />
+<p>Redis is an open source, in-memory data structure store, used as database, cache and message broker. It supports data structures such as strings, hashes, lists, sets, sorted sets with range queries, bitmaps, hyperloglogs and geospatial indexes with radius queries.</p><a href="/search?query=product%3ARedis" class="button">Explore Redis</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/databases/memcached.png" alt="Memcached" />
+<p>Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering. It is intended for use in speeding up dynamic web applications by alleviating database load.</p><a href="/search?query=product%3AMemcached" class="button">Explore Memcached</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/databases/cassandra.png" alt="Cassandra" />
+<p>Apache Cassandra is an open source distributed database management system designed to handle large amounts of data across many commodity servers, providing high availability with no single point of failure.</p><a href="/search?query=product%3ACassandra" class="button">Explore Cassandra</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/databases/couchdb.png" alt="CouchDB" />
+<p>CouchDB is a database that uses JSON for documents, JavaScript for MapReduce indexes and regular HTTP for its API.</p><a href="/search?query=product%3ACouchDB" class="button">Explore CouchDB</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<p>Descriptions for the various technologies were sourced from &nbsp;<a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer nofollow">Wikipedia</a>
+</p>
+</div>
+</div>
+</div>
+<div class="four columns">
+<h6 class="grid-heading"><span>Further Reading</span>
+</h6>
+<div class="card card-padding card-yellow">
+<h1><em>Terabytes</em>of MongoDB Data Exposed
+</h1>
+<p>By default, MongoDB used to listen on the public network interface. This has resulted in many MongoDB users inadvertently making their data viewable to anyone on the Internet.</p><a href="https://blog.shodan.io/its-the-data-stupid/" class="button">Read more</a>
+</div>
+<div class="card card-padding card-purple">
+<h1><em>Memory</em>as a Service
+</h1>
+<p>To improve website performance many companies deploy technologies such as Redis or Memcached to store data in-memory. Read on for a look at the public exposure of the Memcached in-memory storage system.</p><a href="https://blog.shodan.io/memory-as-a-service/" class="button">Read more</a>
+</div>
+<div class="card card-padding card-blue">
+<h1><i class="far fa-spell-check  fa-fw "></i> Common<em>Terms</em>
+</h1>
+<table class="table">
+<tr>
+<th>RDBMS</th>
+<td>Relational Database Management System</td>
+</tr>
+<tr>
+<th>ORDBMS</th>
+<td>Object Relational Database Management System</td>
+</tr>
+<tr>
+<th>NoSQL</th>
+<td>Describes databases that use non-relational models for storing data</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

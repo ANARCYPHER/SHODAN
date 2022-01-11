@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Facet Analysis</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@shodanhq" />
+<meta name="twitter:creator" content="@achillean" />
+<meta name="twitter:title" content="Shodan Facet Analysis" />
+<meta name="twitter:image" content="https://www.shodan.io/search/facet.png?query=%22default+password%22&amp;facet=product" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shodan Facet Analysis" />
+<meta property="og:image" content="https://www.shodan.io/search/facet.png?query=%22default+password%22&amp;facet=product" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta name="twitter:description" content="777 results found for search query: &#34;default password&#34;" />
+<meta property="og:description" content="777 results found for search query: &#34;default password&#34;" />
+<style>.fresult > div {
+    padding: 5px 0 !important;
+}
+
+.fresult .name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fresult .value {
+    text-align: right;
+}
+
+.fresult .bar > div {
+    height: 20px;
+}
+
+.query {
+    width: 300px;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." value="&#34;default password&#34;" autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br /><br />
+<div class="container filters">
+<div class="row">
+<div class="twelve columns">
+<h3 class="heading-highlight"><span>Facet Analysis</span>
+</h3>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<form action="/search/facet" method="GET">
+<div class="searchbox">
+<input name="query" placeholder="Search query..." value="&#34;default password&#34;" type="text" required="required" autocapitalize="none" class="query" />
+<select name="facet">
+<option value="asn">asn</option>
+<option value="bitcoin.ip">bitcoin.ip</option>
+<option value="bitcoin.ip_count">bitcoin.ip_count</option>
+<option value="bitcoin.port">bitcoin.port</option>
+<option value="bitcoin.user_agent">bitcoin.user_agent</option>
+<option value="bitcoin.version">bitcoin.version</option>
+<option value="city">city</option>
+<option value="cloud.provider">cloud.provider</option>
+<option value="cloud.region">cloud.region</option>
+<option value="cloud.service">cloud.service</option>
+<option value="country">country</option>
+<option value="cpe">cpe</option>
+ <option value="device">device</option>
+<option value="domain">domain</option>
+<option value="has_screenshot">has_screenshot</option>
+<option value="hash">hash</option>
+<option value="http.component">http.component</option>
+<option value="http.component_category">http.component_category</option>
+<option value="http.favicon.hash">http.favicon.hash</option>
+<option value="http.html_hash">http.html_hash</option>
+<option value="http.robots_hash">http.robots_hash</option>
+<option value="http.status">http.status</option>
+<option value="http.title">http.title</option>
+<option value="http.waf">http.waf</option>
+<option value="ip">ip</option>
+<option value="isp">isp</option>
+<option value="link">link</option>
+<option value="mongodb.database.name">mongodb.database.name</option>
+<option value="ntp.ip">ntp.ip</option>
+<option value="ntp.ip_count">ntp.ip_count</option>
+<option value="ntp.more">ntp.more</option>
+<option value="ntp.port">ntp.port</option>
+<option value="org">org</option>
+<option value="os">os</option>
+<option value="port">port</option>
+<option value="postal">postal</option>
+<option value="product" selected="selected">product</option>
+<option value="redis.key">redis.key</option>
+<option value="region">region</option>
+<option value="rsync.module">rsync.module</option>
+<option value="screenshot.label">screenshot.label</option>
+<option value="snmp.contact">snmp.contact</option>
+<option value="snmp.location">snmp.location</option>
+<option value="snmp.name">snmp.name</option>
+<option value="ssh.cipher">ssh.cipher</option>
+<option value="ssh.fingerprint">ssh.fingerprint</option>
+<option value="ssh.hassh">ssh.hassh</option>
+<option value="ssh.mac">ssh.mac</option>
+<option value="ssh.type">ssh.type</option>
+<option value="ssl.alpn">ssl.alpn</option>
+<option value="ssl.cert.alg">ssl.cert.alg</option>
+<option value="ssl.cert.expired">ssl.cert.expired</option>
+<option value="ssl.cert.extension">ssl.cert.extension</option>
+<option value="ssl.cert.fingerprint">ssl.cert.fingerprint</option>
+<option value="ssl.cert.issuer.cn">ssl.cert.issuer.cn</option>
+<option value="ssl.cert.pubkey.bits">ssl.cert.pubkey.bits</option>
+<option value="ssl.cert.pubkey.type">ssl.cert.pubkey.type</option>
+<option value="ssl.cert.serial">ssl.cert.serial</option>
+<option value="ssl.cert.subject.cn">ssl.cert.subject.cn</option>
+<option value="ssl.chain_count">ssl.chain_count</option>
+<option value="ssl.cipher.bits">ssl.cipher.bits</option>
+<option value="ssl.cipher.name">ssl.cipher.name</option>
+<option value="ssl.cipher.version">ssl.cipher.version</option>
+<option value="ssl.ja3s">ssl.ja3s</option>
+<option value="ssl.jarm">ssl.jarm</option>
+<option value="ssl.version">ssl.version</option>
+<option value="state">state</option>
+<option value="tag">tag</option>
+<option value="telnet.do">telnet.do</option>
+<option value="telnet.dont">telnet.dont</option>
+<option value="telnet.option">telnet.option</option>
+<option value="telnet.will">telnet.will</option>
+<option value="telnet.wont">telnet.wont</option>
+<option value="uptime">uptime</option>
+<option value="version">version</option>
+<option value="vuln">vuln</option>
+<option value="vuln.verified">vuln.verified</option>
+</select>
+<button type="submit" class="button-primary"><i class="fas fa-search  fa-fw "></i>
+</button>
+ </div>
+</form>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<div style="font-size:2em;line-height:0" class="u-pull-right"><a href="/search/facet.png?query=%22default+password%22&amp;facet=product" class="text-dark"><i class="fas fa-chart-bar  fa-fw "></i></a>
+</div>
+<h6 class="grid-heading"><span>Total: 777</span>
+</h6>
+<div class="card card-padding container u-full-width">
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22LAP%22" class="text-dark"><strong>LAP</strong></a>
+</div>
+<div class="one column value">142</div>
+<div class="seven columns bar">
+<div style="width:100.0%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22LAP-HP%22" class="text-dark"><strong>LAP-HP</strong></a>
+</div>
+<div class="one column value">67</div>
+<div class="seven columns bar">
+<div style="width:47.183098591549296%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22LM5%22" class="text-dark"><strong>LM5</strong></a>
+</div>
+<div class="one column value">62</div>
+<div class="seven columns bar">
+<div style="width:43.66197183098591%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22P5B-300%22" class="text-dark"><strong>P5B-300</strong></a>
+</div>
+<div class="one column value">42</div>
+<div class="seven columns bar">
+<div style="width:29.577464788732392%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22NB5%22" class="text-dark"><strong>NB5</strong></a>
+</div>
+<div class="one column value">35</div>
+<div class="seven columns bar">
+<div style="width:24.647887323943664%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Teradici+PCoIP+Management+Console%22" class="text-dark"><strong>Teradici PCoIP Management Console</strong></a>
+</div>
+<div class="one column value">31</div>
+<div class="seven columns bar">
+<div style="width:21.830985915492956%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22AG5-HP%22" class="text-dark"><strong>AG5-HP</strong></a>
+</div>
+<div class="one column value">29</div>
+<div class="seven columns bar">
+<div style="width:20.422535211267608%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22N5N%22" class="text-dark"><strong>N5N</strong></a>
+</div>
+<div class="one column value">27</div>
+<div class="seven columns bar">
+<div style="width:19.014084507042252%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Apache+httpd%22" class="text-dark"><strong>Apache httpd</strong></a>
+</div>
+<div class="one column value">20</div>
+<div class="seven columns bar">
+<div style="width:14.084507042253522%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22LM2%22" class="text-dark"><strong>LM2</strong></a>
+</div>
+<div class="one column value">18</div>
+<div class="seven columns bar">
+<div style="width:12.676056338028168%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22NS2%22" class="text-dark"><strong>NS2</strong></a>
+</div>
+<div class="one column value">18</div>
+<div class="seven columns bar">
+<div style="width:12.676056338028168%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22AGW-LR%22" class="text-dark"><strong>AGW-LR</strong></a>
+</div>
+<div class="one column value">15</div>
+<div class="seven columns bar">
+<div style="width:10.56338028169014%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22N2N%22" class="text-dark"><strong>N2N</strong></a>
+</div>
+<div class="one column value">14</div>
+<div class="seven columns bar">
+<div style="width:9.859154929577464%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22nginx%22" class="text-dark"><strong>nginx</strong></a>
+</div>
+<div class="one column value">12</div>
+<div class="seven columns bar">
+<div style="width:8.450704225352112%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22AGW%22" class="text-dark"><strong>AGW</strong></a>
+</div>
+<div class="one column value">7</div>
+<div class="seven columns bar">
+<div style="width:4.929577464788732%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22NS5%22" class="text-dark"><strong>NS5</strong></a>
+</div>
+<div class="one column value">7</div>
+<div class="seven columns bar">
+<div style="width:4.929577464788732%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Edimax+PS-1206P+print+server%22" class="text-dark"><strong>Edimax PS-1206P print server</strong></a>
+</div>
+<div class="one column value">6</div>
+<div class="seven columns bar">
+<div style="width:4.225352112676056%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22N5B-300%22" class="text-dark"><strong>N5B-300</strong></a>
+</div>
+<div class="one column value">6</div>
+<div class="seven columns bar">
+<div style="width:4.225352112676056%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22MQTT%22" class="text-dark"><strong>MQTT</strong></a>
+</div>
+<div class="one column value">5</div>
+<div class="seven columns bar">
+<div style="width:3.5211267605633805%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22PAP%22" class="text-dark"><strong>PAP</strong></a>
+</div>
+<div class="one column value">4</div>
+<div class="seven columns bar">
+<div style="width:2.8169014084507045%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22pS2-HP%22" class="text-dark"><strong>pS2-HP</strong></a>
+</div>
+<div class="one column value">4</div>
+<div class="seven columns bar">
+<div style="width:2.8169014084507045%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22lighttpd%22" class="text-dark"><strong>lighttpd</strong></a>
+</div>
+<div class="one column value">3</div>
+<div class="seven columns bar">
+<div style="width:2.112676056338028%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22p2N%22" class="text-dark"><strong>p2N</strong></a>
+</div>
+<div class="one column value">3</div>
+<div class="seven columns bar">
+<div style="width:2.112676056338028%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22LC2%22" class="text-dark"><strong>LC2</strong></a>
+</div>
+<div class="one column value">2</div>
+<div class="seven columns bar">
+<div style="width:1.4084507042253522%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22N5B-16%22" class="text-dark"><strong>N5B-16</strong></a>
+</div>
+<div class="one column value">2</div>
+<div class="seven columns bar">
+<div style="width:1.4084507042253522%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22N5B-400%22" class="text-dark"><strong>N5B-400</strong></a>
+</div>
+<div class="one column value">2</div>
+<div class="seven columns bar">
+<div style="width:1.4084507042253522%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22P5B-400%22" class="text-dark"><strong>P5B-400</strong></a>
+</div>
+<div class="one column value">2</div>
+<div class="seven columns bar">
+<div style="width:1.4084507042253522%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22AG2-HP%22" class="text-dark"><strong>AG2-HP</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Apache+Tomcat%2FCoyote+JSP+engine%22" class="text-dark"><strong>Apache Tomcat/Coyote JSP engine</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22BS2%22" class="text-dark"><strong>BS2</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22BZ2%22" class="text-dark"><strong>BZ2</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22LB5%22" class="text-dark"><strong>LB5</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22MS5%22" class="text-dark"><strong>MS5</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Microsoft+IIS+httpd%22" class="text-dark"><strong>Microsoft IIS httpd</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22N5B-19%22" class="text-dark"><strong>N5B-19</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22R2N%22" class="text-dark"><strong>R2N</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Remote+Desktop+Protocol%22" class="text-dark"><strong>Remote Desktop Protocol</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22Squid+http+proxy%22" class="text-dark"><strong>Squid http proxy</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+<div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+<div class="row fresult">
+<div class="four columns name"><a href="/search?query=%22default+password%22+product%3A%22pS2%22" class="text-dark"><strong>pS2</strong></a>
+</div>
+<div class="one column value">1</div>
+<div class="seven columns bar">
+ <div style="width:0.7042253521126761%;" class="bg-primary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Trends</title>
+<meta charset="utf-8">
+<meta name="description" content="Search the historical data of Shodan to discover trends">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="https://static.shodan.io/shodan/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://trends.shodan.io/static/img/apple-touch-icon-192.png">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@shodanhq">
+<meta name="twitter:creator" content="@achillean">
+<meta name="twitter:title" content="Shodan">
+<meta name="twitter:description" content="Shodan Trends - Discover how the Internet has changed over time.">
+<meta name="twitter:image" content="https://trends.shodan.io/static/img/opengraph.png">
+<meta property="og:type" content="object">
+<meta property="og:site_name" content="Shodan">
+<meta property="og:url" content="https://trends.shodan.io">
+<meta property="og:title" content="Shodan">
+<meta property="og:image:alt" content="Shodan Trends - Discover how the Internet has changed over time.">
+<meta property="og:description" content="Shodan Trends - Discover how the Internet has changed over time.">
+<meta property="og:image" content="https://trends.shodan.io/static/img/opengraph.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="600">
+<style>@media (max-width: 900px) {
+    .navbar .title span {
+        display: none !important;
+    }
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+#overlay {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.7;
+    z-index: 10000;
+}
+
+#overlay > div {
+    background-color: #111111;
+    border: 1px solid #404040;
+    color: white;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+    height: 25px;
+    padding: 10px;
+}
+
+#overlay > div > img {
+    padding-right: 10px;
+}
+    </style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div id="overlay">
+<div><img src="https://trends.shodan.io/static/img/spinner.gif">Loading
+</div>
+</div>
+<div class="container u-full-width bg-img-dark">
+<div class="row">
+<div class="twelve columns">
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="https://static.shodan.io/shodan-ds/img/logo.png" alt="Shodan" /><span>Trends</span></a>
+<form action="/search">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." autofocus="autofocus" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search query" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+</div>
+<div class="u-cf"></div>
+</div>
+</div>
+<div class="container">
+<div class="row banner">
+<div class="six columns tagline">
+<h1><span>Discover Trends on the Internet</span>
+</h1>
+<h2><span>How have remote work, government policies or the IoT changed the Internet? Shodan Trends lets you search across the Internet's history to discover trends.</span>
+</h2>
+<div class="tag bg-primary">Early Access</div>
+<p class="light">The product is still in beta and is subject to changes. Please email support@shodan.io with any feedback.</p>
+</div>
+<div class="six columns image tagline"><img src="https://trends.shodan.io/static/img/frontpage_example.png" width="100%" alt="Growth of Vue.js" />
+</div>
+</div>
+</div>
+</div>
+<section>
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>What's Included</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-purple card-padding">
+<h1><i class="far fa-analytics  fa-fw "></i><em>Historical</em>Insights
+</h1>
+<p>Search across data that stretches as far back as 2017. Shodan Trends provides a month-to-month breakdown of results so you can see how the Internet is changing.</p>
+</div>
+<div class="four columns card card-red card-padding">
+<h1><i class="far fa-dolly  fa-fw "></i><em>Data</em>Export
+</h1>
+<p>Want to dig into the data even more? No problem! Take the trend data with you by exporting it to CSV so you can import the insights into other tools.</p>
+</div>
+<div class="four columns card card-blue card-padding">
+<h1><i class="far fa-filter  fa-fw "></i><em>Filter</em>Reference
+</h1>
+<p>Here is a list of available search filters that Shodan Trends supports:</p><a href="/search/filters" class="button button-blue">View filters</a>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-solid">
+<div class="container">
+<section class="row">
+<div class="six columns">
+<h4 class="heading-highlight"><span>Technology Trends</span>
+</h4>
+<p>See how new technologies have grown in popularity and old ones have fallen out of favor. Use Shodan's trusted historical data to find out which technologies are taking over the Internet.</p><a href="/search?query=http.component%3Avue.js" class="button">Example: Growth of Vue.js</a>
+</div>
+<div class="six columns">
+<h4 class="heading-highlight"><span>Network Reputation</span>
+</h4>
+<p>Explore the history of an IP range to see how fast they patch their services, whether there used to be malware hosted on them or simply get an understanding of their security posture over time.</p>
+</div>
+</section>
+<section class="row">
+<div class="six columns">
+<h4 class="heading-highlight"><span>Threat Intelligence for the Ages</span>
+</h4>
+<p>Track a threat actor's infrastructure throughout time and learn more about what they were doing in the past. Shodan Trends doesn't return the list of IPs but you can see where/ when the infrastructure was deployed and other related information.</p>
+</div>
+<div class="six columns">
+<h4 class="heading-highlight"><span>Hypothesis Testing</span>
+</h4>
+<p>Are there more encrypted services today than 4 years ago? Has Let's Encrypt been a major driver for that adoption? Use Shodan Trends to gain data-driven insights.</p><a href="/search?query=ssl%3A%22Let+s+Encrypt%22" class="button">Example: Rise of Let's Encrypt</a>
+</div>
+</section>
+</div>
+</div><br />
+<div class="bg-primary">
+<div class="container">
+<div class="row">
+<div class="twelve columns u-center"><br />
+<h5>Pricing: <strong>1 search = 1 query credit</strong>
+</h5>
+<p class="light text-light">*Cached queries don't consume query credits.</p>
+</div>
+</div>
+</div>
+</div><br />
+<div class="container">
+<div class="row">
+<div class="two columns">&nbsp;</div>
+<div class="eight columns">
+<div class="card card-padding">
+<h4 class="heading-highlight">Frequently Asked Questions</h4><strong>How much historical data is searchable in Shodan Trends?</strong>
+<p>For the beta, we've indexed everything from June 2017 though today. Shodan has historical data available going back even further and we will adding those to Trends over time.</p><strong>How do you buy Shodan Trends?</strong>
+<p>It's available at no additional cost! Every Trends search consumes 1 query credit which are already included in all Shodan subscriptions and the membership.</p><strong>Who can access Shodan Trends?</strong>
+<p>Anybody with a paid Shodan account: Membership, API subscription or Enterprise.</p><strong>Is there an API method to grab the data?</strong>
+<p>Not yet! This is the first Shodan product that didn't start off with a public API before developing the website. We will be monitoring the performance of the searches on the website to better plan how we should expose the data in the API.</p><strong>Can I download the trend data?</strong>
+<p>Yes! The search results page has an "Export" button that will download the data in CSV format.</p>
+</div>
+</div>
+<div class="two columns"></div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" class="f-lightgrey"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan/" class="f-lightgrey"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" class="f-lightgrey"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

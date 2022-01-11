@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>linux upnp avtech - Shodan Search</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@shodanhq" />
+<meta name="twitter:creator" content="@achillean" />
+<meta name="twitter:title" content="Shodan Search" />
+<meta name="twitter:image" content="https://www.shodan.io/search/report.png?query=linux+upnp+avtech" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shodan Search" />
+<meta property="og:image" content="https://www.shodan.io/search/report.png?query=linux+upnp+avtech" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta name="twitter:description" content="197,019 results found for search query: linux upnp avtech" />
+<meta property="og:description" content="197,019 results found for search query: linux upnp avtech" />
+<style>.tile-ssl ul {
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+.tile-ssl li > span {
+    display: block;
+}
+</style>
+<link rel="stylesheet" href="/static/jquery/jquery-jvectormap-1.2.2.css" />
+<style>.jvectormap-zoomout,
+.jvectormap-zoomin {
+    display: none;
+}
+</style>
+<style>.l-search-results {
+    font-family: Arial;
+    overflow: hidden;
+}
+
+.l-search-results .result {
+    padding-bottom: 20px;
+}
+
+.l-search-results .result .timestamp {
+    height: 28px;
+    line-height: 28px;
+}
+
+.l-search-results .result-details {
+    line-height: 1.2;
+    font-size: 1.1rem;
+}
+
+.l-search-results .result-details ul {
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.l-search-results .result-details li {
+    margin-bottom: 3px;
+}
+
+.l-search-results .result-details li.components {
+    padding-top: 6px;
+}
+
+.l-search-results .result .columns {
+    padding: 0;
+}
+
+.l-search-results .result .hostnames{
+    word-break: break-all;
+}
+
+.l-search-results .result pre {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.l-search-results .result .flag {
+    margin-right: 4px;
+    vertical-align: text-bottom;
+}
+
+.pagination {
+    margin: 20px 0 0 0;
+}
+
+.http-tech {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+img.screenshot {
+    width: 100%;
+}
+
+.tile {
+    font-size: 1.1rem;
+}
+
+.tile h1 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+#worldmap {
+    height: 120px;
+    padding: 8px 0;
+}
+
+#shodan-links a {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 4px 2px;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." value="linux upnp avtech" autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br />
+<div class="container u-full-width card card-padding">
+<div class="row l-search-results">
+<div class="three columns summary">
+<h6>Total Results</h6>
+<h4>197,019</h4>
+<h6>Top Countries</h6>
+<div id="worldmap"></div>
+<ul>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+country%3A%22MY%22" class="text-dark">Malaysia</a><span class="u-pull-right">41,941</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+country%3A%22TH%22" class="text-dark">Thailand</a><span class="u-pull-right">32,512</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+country%3A%22TW%22" class="text-dark">Taiwan</a><span class="u-pull-right">13,264</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+country%3A%22ID%22" class="text-dark">Indonesia</a><span class="u-pull-right">13,128</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+country%3A%22SA%22" class="text-dark">Saudi Arabia</a><span class="u-pull-right">10,552</span>
+</li>
+<li><a href="/search/facet?query=linux+upnp+avtech&amp;facet=country">More...</a>
+</li>
+</ul>
+<h6>Top Ports</h6>
+<ul>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+port%3A%2280%22" class="text-dark">80</a><span class="u-pull-right">18,218</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+port%3A%2288%22" class="text-dark">88</a><span class="u-pull-right">4,974</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+port%3A%228080%22" class="text-dark">8080</a><span class="u-pull-right">3,824</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+port%3A%2281%22" class="text-dark">81</a><span class="u-pull-right">3,576</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+port%3A%228000%22" class="text-dark">8000</a><span class="u-pull-right">2,635</span>
+</li>
+<li><a href="/search/facet?query=linux+upnp+avtech&amp;facet=port">More...</a>
+</li>
+</ul>
+<h6>Top Organizations</h6>
+<ul>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+org%3A%22TMNST%22" class="text-dark">TMNST</a><span class="u-pull-right">20,209</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+org%3A%22Maxis+Broadband+Sdn+Bhd%22" class="text-dark">Maxis Broadband Sdn Bhd</a><span class="u-pull-right">12,294</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+org%3A%22Triple+T+Broadband+Public+Company+Limited%22" class="text-dark">Triple T Broadband Public Company Limited</a><span class="u-pull-right">11,482</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+org%3A%22Saudi+Telecom+Company+JSC%22" class="text-dark">Saudi Telecom Company JSC</a><span class="u-pull-right">10,550</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+org%3A%22Chunghwa+Telecom+Co.%2CLtd.%22" class="text-dark">Chunghwa Telecom Co.,Ltd.</a><span class="u-pull-right">9,884</span>
+</li>
+<li><a href="/search/facet?query=linux+upnp+avtech&amp;facet=org">More...</a>
+</li>
+</ul>
+<h6>Top Products</h6>
+<ul>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+product%3A%22Avtech+AVN801+network+camera%22" class="text-dark">Avtech AVN801 network camera</a><span class="u-pull-right">55,821</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+product%3A%22lighttpd%22" class="text-dark">lighttpd</a><span class="u-pull-right">36</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+product%3A%22Apache+httpd%22" class="text-dark">Apache httpd</a><span class="u-pull-right">29</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+product%3A%22HttpFileServer+httpd%22" class="text-dark">HttpFileServer httpd</a><span class="u-pull-right">18</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+product%3A%22Teradici+PCoIP+Management+Console%22" class="text-dark">Teradici PCoIP Management Console</a><span class="u-pull-right">17</span>
+</li>
+<li><a href="/search/facet?query=linux+upnp+avtech&amp;facet=product">More...</a>
+</li>
+</ul>
+<h6>Top Operating Systems</h6>
+<ul>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+os%3A%22Synology%22" class="text-dark">Synology</a><span class="u-pull-right">21</span>
+</li>
+<li class="normalize"><a href="/search?query=linux+upnp+avtech+os%3A%22MikroTik+RouterOS+6.27%22" class="text-dark">MikroTik RouterOS 6.27</a><span class="u-pull-right">17</span>
+</li>
+</ul>
+</div>
+<div class="nine columns">
+<div id="shodan-links"><a href="/search/report?query=linux+upnp+avtech" class="text-secondary card-orange"><i class="far fa-analytics  fa-fw "></i>&nbsp;View Report</a>
+<a href="https://maps.shodan.io/#16.720385051693988/3.515625/3/satellite/linux%20upnp%20avtech" class="text-secondary card-light-green"><i class="far fa-map  fa-fw "></i>&nbsp;View on Map</a>
+</div>
+<div style="margin-bottom: 10px; padding-left:20px" class="bg-light"><strong>New Service:&nbsp;</strong>Keep track of what you have connected to the Internet. Check out&nbsp;<a href="https://monitor.shodan.io" style="font-weight:bold" target="_blank" rel="noopener noreferrer nofollow">Shodan Monitor</a>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:49:25.033097</div>
+<div class="heading"><a href="/host/86.246.183.48" class="title text-dark">86.246.183.48</a><a href="http://86.246.183.48:443" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">lfbn-idf2-1-479-48.w86-246.abo.wanadoo.fr</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Orange+S.A.%22" class="filter-link filter-org">Orange S.A.</a>
+</li>
+ <li><img src="/static/flags/16/FR.png" title="France" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22FR%22" class="filter-link text-dark">France</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Paris%22" class="filter-link text-dark">Paris</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Tue, 11 Jan 2022 23:49:24 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Wed, 19 Jul 2017 09:24:51 GMT
+Content-Type: text/html
+ETag: 384-15850-1500456291
+Content-Length: 15850
+
+&lt;html&gt;
+&lt;head&gt;
+&lt;link rel=&quot;icon&quot; href=&quot;/nobody/favicon.ico&quot; t...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:48:08.306274</div>
+<div class="heading"><a href="/host/183.81.79.47" class="title text-dark">::: Login :::</a><a href="http://183.81.79.47:85" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">183.81.79.47</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22FPT+Telecom+Company%22" class="filter-link filter-org">FPT Telecom Company</a>
+</li>
+<li><img src="/static/flags/16/VN.png" title="Viet Nam" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22VN%22" class="filter-link text-dark">Viet Nam</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Ho+Chi+Minh+City%22" class="filter-link text-dark">Ho Chi Minh City</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 05:50:06 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Wed, 26 Apr 2017 07:14:20 GMT
+Content-Type: text/html
+ETag: 379-15850-1493190860
+Content-Length: 15850</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:55.177297</div>
+<div class="heading"><a href="/host/125.24.52.46" class="title text-dark">::: Login :::</a><a href="http://125.24.52.46:8080" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">125.24.52.46</li>
+<li class="hostnames text-secondary">node-ab2.pool-125-24.dynamic.totinternet.net</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22TOT+Public+Company+Limited+Bangkok%22" class="filter-link filter-org">TOT Public Company Limited Bangkok</a>
+</li>
+<li><img src="/static/flags/16/TH.png" title="Thailand" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22TH%22" class="filter-link text-dark">Thailand</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Bangkok%22" class="filter-link text-dark">Bangkok</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 06:20:52 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Thu, 30 Mar 2017 06:47:43 GMT
+Content-Type: text/html
+ETag: 260-16695-1490856463
+Content-Length: 16695</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:38.233293</div>
+<div class="heading"><a href="/host/42.117.44.222" class="title text-dark">::: Login :::</a><a href="http://42.117.44.222:9999" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">42.117.44.222</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22FPT+Telecom+Company%22" class="filter-link filter-org">FPT Telecom Company</a>
+</li>
+<li><img src="/static/flags/16/VN.png" title="Viet Nam" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22VN%22" class="filter-link text-dark">Viet Nam</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Ho+Chi+Minh+City%22" class="filter-link text-dark">Ho Chi Minh City</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Tue, 11 Jan 2022 18:12:09 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Mon, 24 Dec 2018 10:42:35 GMT
+Content-Type: text/html
+ETag: 166-15850-1545648155
+Content-Length: 15850</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:37.600692</div>
+<div class="heading"><a href="/host/125.228.144.145" class="title text-dark">::: Login :::</a><a href="http://125.228.144.145:80" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">125.228.144.145</li>
+<li class="hostnames text-secondary">125-228-144-145.hinet-ip.hinet.net</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Chunghwa+Telecom+Co.+Ltd.%22" class="filter-link filter-org">Chunghwa Telecom Co.,Ltd.</a>
+</li>
+<li><img src="/static/flags/16/TW.png" title="Taiwan" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22TW%22" class="filter-link text-dark">Taiwan</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Taoyuan+City%22" class="filter-link text-dark">Taoyuan City</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 06:46:36 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Fri, 15 Jun 2018 14:53:52 GMT
+Content-Type: text/html
+ETag: 168-58989-1529074432
+Content-Length: 58989</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:23.769980</div>
+<div class="heading"><a href="/search?query=linux+upnp+avtech+http.favicon.hash%3A-194439630" class="favicon"><img src="data:image/x-icon;base64,AAABAAIAEBAAAAEACABoBQAAJgAAACAgAAABACAAqBAAAI4FAAAoAAAAEAAAACAAAAABAAgAAAAA
+AAABAAASCwAAEgsAAAABAAAAAQAAaEIqAH5TNACSYDwAibp9ALCFagDfk1wA3qd7AJmenACRqosA
+o5WxAL29+gCm/rQA0KKCAMq0oADvuokA3sSmAP/ktQDS/9sA3+b+ANju8gDa9+kA/O3dAOT6/gD/
+/+MA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAABkZGRkZGRkZGRkZGRkZGRkZGRkZBAIBAQEBAhkZGRkZGRkZBAEN
+FxcXFw0MGRkZGRkZBAEXFwUFBQ4XGBgZGRkZBAEXGBUPDw8GBRAYDBkZGQINFxUYFhMUFgYFFw0C
+GRkBFwUPFgoHCAsWBg4XARkZARcFDxIJAAADEQ8FFwEZGQEXBQ8SCQAAAxEPBRcBGRkBFw4GFgoH
+CAsWDwUXARkZAg0XBQYWExQWGBUXDQIZGRkMGBAFBg8PDxUYFwEEGRkZGRgYFw4FBQUXFwEEGRkZ
+GRkZDA0XFxcXDQEEGRkZGRkZGRkCAQEBAQIEGRkZGRkZGRkZGRkZGRkZGRkZGRn//wAA8B8AAOAP
+AADABwAAgAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMABAADgAwAA8AcAAPgPAAD//wAAKAAA
+ACAAAABAAAAAAQAgAAAAAAAAEAAAEgsAABILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/kmA8/5JgPP9+
+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsIVq
+/7CFav+SYDz/kmA8/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/kmA8/5JgPP8AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAsIVq/7CFav9+UzT/flM0/8q0oP/KtKD////j////4////+P////j////4////+P////j////
+4//KtKD/yrSg/9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT/yrSg/8q0oP///+P////j////4////+P/
+///j////4////+P////j/8q0oP/KtKD/0KKC/9Cigv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT////j////4////+P////j/9+T
+XP/fk1z/35Nc/9+TXP/fk1z/35Nc/++6if/vuon////j////4///////////////////////AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35TNP///+P/
+///j////4////+P/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z/77qJ/++6if///+P////j////////
+//////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35T
+NP///+P////j/////////////O3d//zt3f/exKb/3sSm/97Epv/exKb/3sSm/97Epv/ep3v/3qd7
+/9+TXP/fk1z//+S1///ktf///////////9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+sIVq/7CFav9+UzT/flM0////4////+P////////////87d3//O3d/97Epv/exKb/3sSm/97Epv/e
+xKb/3sSm/96ne//ep3v/35Nc/9+TXP//5LX//+S1////////////0KKC/9Cigv8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAACSYDz/kmA8/8q0oP/KtKD////j////4//87d3//O3d////////////5Pr+
+/+T6/v/Y7vL/2O7y/9r36f/a9+n/5Pr+/+T6/v/ep3v/3qd7/9+TXP/fk1z////j////4//KtKD/
+yrSg/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP///+P////j//zt3f/8
+7d3////////////k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+/96ne//ep3v/35Nc/9+T
+XP///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j
+/9+TXP/fk1z/3sSm/97Epv/k+v7/5Pr+/729+v+9vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/
+5Pr+/+T6/v/ep3v/3qd7/++6if/vuon////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+
+UzT/flM0////4////+P/35Nc/9+TXP/exKb/3sSm/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gq
+i/+Rqov/pv60/6b+tP/k+v7/5Pr+/96ne//ep3v/77qJ/++6if///+P////j/35TNP9+UzT/AAAA
+AAAAAAAAAAAAAAAAAH5TNP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/
+o5Wx/2hCKv9oQir/aEIq/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4///
+/+P/flM0/35TNP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j/9+TXP/fk1z/3sSm/97E
+pv/f5v7/3+b+/6OVsf+jlbH/aEIq/2hCKv9oQir/aEIq/4m6ff+Jun3/0v/b/9L/2//exKb/3sSm
+/9+TXP/fk1z////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/
+35Nc/9+TXP/exKb/3sSm/9/m/v/f5v7/o5Wx/6OVsf9oQir/aEIq/2hCKv9oQir/ibp9/4m6ff/S
+/9v/0v/b/97Epv/exKb/35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAH5T
+NP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/o5Wx/2hCKv9oQir/aEIq
+/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4////+P/flM0/35TNP8AAAAA
+AAAAAAAAAAAAAAAAflM0/35TNP///+P////j/++6if/vuon/3qd7/96ne//k+v7/5Pr+/729+v+9
+vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/5Pr+/+T6/v/exKb/3sSm/9+TXP/fk1z////j////
+4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/77qJ/++6if/ep3v/3qd7
+/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gqi/+Rqov/pv60/6b+tP/k+v7/5Pr+/97Epv/exKb/
+35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP//
+/+P////j/9+TXP/fk1z/3qd7/96ne//k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+////
+/////////O3d//zt3f///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAkmA8
+/5JgPP/KtKD/yrSg////4////+P/35Nc/9+TXP/ep3v/3qd7/+T6/v/k+v7/2O7y/9ju8v/a9+n/
+2vfp/+T6/v/k+v7////////////87d3//O3d////4////+P/yrSg/8q0oP+SYDz/kmA8/wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/////////////5LX//+S1/9+TXP/fk1z/3qd7/96n
+e//exKb/3sSm/97Epv/exKb/3sSm/97Epv/87d3//O3d///////////////j////4/9+UzT/flM0
+/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/////////////ktf//5LX/
+35Nc/9+TXP/ep3v/3qd7/97Epv/exKb/3sSm/97Epv/exKb/3sSm//zt3f/87d3/////////////
+/+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
+/////////////////////+P////j/++6if/vuon/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z////j
+////4////+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA////////////////////////4////+P/77qJ/++6if/fk1z/35Nc/9+TXP/f
+k1z/35Nc/9+TXP///+P////j////4////+P/flM0/35TNP+whWr/sIVq/wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/yrSg/8q0oP///+P////j
+////4////+P////j////4////+P////j/8q0oP/KtKD/flM0/35TNP+whWr/sIVq/wAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/K
+tKD/yrSg////4////+P////j////4////+P////j////4////+P/yrSg/8q0oP9+UzT/flM0/7CF
+av+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAJJgPP+SYDz/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP+SYDz/
+kmA8/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkmA8/5JgPP9+UzT/flM0/35TNP9+UzT/flM0/35T
+NP9+UzT/flM0/5JgPP+SYDz/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////8AA///AAP//AAA//wAAP/wAAA/
+8AAAP8AAAA/AAAAPwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPA
+AAAD8AAAA/AAAAP8AAAP/AAAD/8AAD//AAA//8AA///AAP///////////w==
+" width="16" height="16" /></a><a href="/host/118.103.253.179" class="title text-dark">Remote Surveillance, Any time &amp;amp; Any where</a><a href="http://118.103.253.179:2762" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">118.103.253.179</li>
+<li class="hostnames text-secondary">179-253.adsl.static.espeed.com.bn</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22eSpeed+-+Broadband+DSL%22" class="filter-link filter-org">eSpeed - Broadband DSL</a>
+</li>
+<li><img src="/static/flags/16/BN.png" title="Brunei Darussalam" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22BN%22" class="filter-link text-dark">Brunei Darussalam</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Bandar+Seri+Begawan%22" class="filter-link text-dark">Bandar Seri Begawan</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 07:09:12 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Wed, 20 Feb 2019 05:03:39 GMT
+Content-Type: text/html
+ETag: 225-54171-1550639019
+Content-Length: 54171</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:23.047765</div>
+<div class="heading"><a href="/search?query=linux+upnp+avtech+http.favicon.hash%3A-194439630" class="favicon"><img src="data:image/x-icon;base64,AAABAAIAEBAAAAEACABoBQAAJgAAACAgAAABACAAqBAAAI4FAAAoAAAAEAAAACAAAAABAAgAAAAA
+AAABAAASCwAAEgsAAAABAAAAAQAAaEIqAH5TNACSYDwAibp9ALCFagDfk1wA3qd7AJmenACRqosA
+o5WxAL29+gCm/rQA0KKCAMq0oADvuokA3sSmAP/ktQDS/9sA3+b+ANju8gDa9+kA/O3dAOT6/gD/
+/+MA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAABkZGRkZGRkZGRkZGRkZGRkZGRkZBAIBAQEBAhkZGRkZGRkZBAEN
+FxcXFw0MGRkZGRkZBAEXFwUFBQ4XGBgZGRkZBAEXGBUPDw8GBRAYDBkZGQINFxUYFhMUFgYFFw0C
+GRkBFwUPFgoHCAsWBg4XARkZARcFDxIJAAADEQ8FFwEZGQEXBQ8SCQAAAxEPBRcBGRkBFw4GFgoH
+CAsWDwUXARkZAg0XBQYWExQWGBUXDQIZGRkMGBAFBg8PDxUYFwEEGRkZGRgYFw4FBQUXFwEEGRkZ
+GRkZDA0XFxcXDQEEGRkZGRkZGRkCAQEBAQIEGRkZGRkZGRkZGRkZGRkZGRkZGRn//wAA8B8AAOAP
+AADABwAAgAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMABAADgAwAA8AcAAPgPAAD//wAAKAAA
+ACAAAABAAAAAAQAgAAAAAAAAEAAAEgsAABILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/kmA8/5JgPP9+
+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsIVq
+/7CFav+SYDz/kmA8/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/kmA8/5JgPP8AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAsIVq/7CFav9+UzT/flM0/8q0oP/KtKD////j////4////+P////j////4////+P////j////
+4//KtKD/yrSg/9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT/yrSg/8q0oP///+P////j////4////+P/
+///j////4////+P////j/8q0oP/KtKD/0KKC/9Cigv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT////j////4////+P////j/9+T
+XP/fk1z/35Nc/9+TXP/fk1z/35Nc/++6if/vuon////j////4///////////////////////AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35TNP///+P/
+///j////4////+P/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z/77qJ/++6if///+P////j////////
+//////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35T
+NP///+P////j/////////////O3d//zt3f/exKb/3sSm/97Epv/exKb/3sSm/97Epv/ep3v/3qd7
+/9+TXP/fk1z//+S1///ktf///////////9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+sIVq/7CFav9+UzT/flM0////4////+P////////////87d3//O3d/97Epv/exKb/3sSm/97Epv/e
+xKb/3sSm/96ne//ep3v/35Nc/9+TXP//5LX//+S1////////////0KKC/9Cigv8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAACSYDz/kmA8/8q0oP/KtKD////j////4//87d3//O3d////////////5Pr+
+/+T6/v/Y7vL/2O7y/9r36f/a9+n/5Pr+/+T6/v/ep3v/3qd7/9+TXP/fk1z////j////4//KtKD/
+yrSg/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP///+P////j//zt3f/8
+7d3////////////k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+/96ne//ep3v/35Nc/9+T
+XP///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j
+/9+TXP/fk1z/3sSm/97Epv/k+v7/5Pr+/729+v+9vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/
+5Pr+/+T6/v/ep3v/3qd7/++6if/vuon////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+
+UzT/flM0////4////+P/35Nc/9+TXP/exKb/3sSm/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gq
+i/+Rqov/pv60/6b+tP/k+v7/5Pr+/96ne//ep3v/77qJ/++6if///+P////j/35TNP9+UzT/AAAA
+AAAAAAAAAAAAAAAAAH5TNP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/
+o5Wx/2hCKv9oQir/aEIq/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4///
+/+P/flM0/35TNP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j/9+TXP/fk1z/3sSm/97E
+pv/f5v7/3+b+/6OVsf+jlbH/aEIq/2hCKv9oQir/aEIq/4m6ff+Jun3/0v/b/9L/2//exKb/3sSm
+/9+TXP/fk1z////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/
+35Nc/9+TXP/exKb/3sSm/9/m/v/f5v7/o5Wx/6OVsf9oQir/aEIq/2hCKv9oQir/ibp9/4m6ff/S
+/9v/0v/b/97Epv/exKb/35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAH5T
+NP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/o5Wx/2hCKv9oQir/aEIq
+/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4////+P/flM0/35TNP8AAAAA
+AAAAAAAAAAAAAAAAflM0/35TNP///+P////j/++6if/vuon/3qd7/96ne//k+v7/5Pr+/729+v+9
+vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/5Pr+/+T6/v/exKb/3sSm/9+TXP/fk1z////j////
+4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/77qJ/++6if/ep3v/3qd7
+/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gqi/+Rqov/pv60/6b+tP/k+v7/5Pr+/97Epv/exKb/
+35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP//
+/+P////j/9+TXP/fk1z/3qd7/96ne//k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+////
+/////////O3d//zt3f///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAkmA8
+/5JgPP/KtKD/yrSg////4////+P/35Nc/9+TXP/ep3v/3qd7/+T6/v/k+v7/2O7y/9ju8v/a9+n/
+2vfp/+T6/v/k+v7////////////87d3//O3d////4////+P/yrSg/8q0oP+SYDz/kmA8/wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/////////////5LX//+S1/9+TXP/fk1z/3qd7/96n
+e//exKb/3sSm/97Epv/exKb/3sSm/97Epv/87d3//O3d///////////////j////4/9+UzT/flM0
+/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/////////////ktf//5LX/
+35Nc/9+TXP/ep3v/3qd7/97Epv/exKb/3sSm/97Epv/exKb/3sSm//zt3f/87d3/////////////
+/+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
+/////////////////////+P////j/++6if/vuon/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z////j
+////4////+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA////////////////////////4////+P/77qJ/++6if/fk1z/35Nc/9+TXP/f
+k1z/35Nc/9+TXP///+P////j////4////+P/flM0/35TNP+whWr/sIVq/wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/yrSg/8q0oP///+P////j
+////4////+P////j////4////+P////j/8q0oP/KtKD/flM0/35TNP+whWr/sIVq/wAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/K
+tKD/yrSg////4////+P////j////4////+P////j////4////+P/yrSg/8q0oP9+UzT/flM0/7CF
+av+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAJJgPP+SYDz/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP+SYDz/
+kmA8/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkmA8/5JgPP9+UzT/flM0/35TNP9+UzT/flM0/35T
+NP9+UzT/flM0/5JgPP+SYDz/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////8AA///AAP//AAA//wAAP/wAAA/
+8AAAP8AAAA/AAAAPwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPA
+AAAD8AAAA/AAAAP8AAAP/AAAD/8AAD//AAA//8AA///AAP///////////w==
+" width="16" height="16" /></a><a href="/host/111.185.5.102" class="title text-dark">Remote Surveillance, Any time &amp;amp; Any where</a><a href="http://111.185.5.102:80" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">111.185.5.102</li>
+<li class="hostnames text-secondary">host-102.5-185-111.static.totalbb.net.tw</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Hoshin+MultiMedia+Center+Inc.%22" class="filter-link filter-org">Hoshin MultiMedia Center Inc.</a>
+</li>
+<li><img src="/static/flags/16/TW.png" title="Taiwan" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22TW%22" class="filter-link text-dark">Taiwan</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Taipei%22" class="filter-link text-dark">Taipei</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 06:46:22 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Fri, 08 May 2020 08:46:42 GMT
+Content-Type: text/html
+ETag: 230-57782-1588927602
+Content-Length: 57782</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:15.613820</div>
+<div class="heading"><a href="/search?query=linux+upnp+avtech+http.favicon.hash%3A-194439630" class="favicon"><img src="data:image/x-icon;base64,AAABAAIAEBAAAAEACABoBQAAJgAAACAgAAABACAAqBAAAI4FAAAoAAAAEAAAACAAAAABAAgAAAAA
+AAABAAASCwAAEgsAAAABAAAAAQAAaEIqAH5TNACSYDwAibp9ALCFagDfk1wA3qd7AJmenACRqosA
+o5WxAL29+gCm/rQA0KKCAMq0oADvuokA3sSmAP/ktQDS/9sA3+b+ANju8gDa9+kA/O3dAOT6/gD/
+/+MA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAABkZGRkZGRkZGRkZGRkZGRkZGRkZBAIBAQEBAhkZGRkZGRkZBAEN
+FxcXFw0MGRkZGRkZBAEXFwUFBQ4XGBgZGRkZBAEXGBUPDw8GBRAYDBkZGQINFxUYFhMUFgYFFw0C
+GRkBFwUPFgoHCAsWBg4XARkZARcFDxIJAAADEQ8FFwEZGQEXBQ8SCQAAAxEPBRcBGRkBFw4GFgoH
+CAsWDwUXARkZAg0XBQYWExQWGBUXDQIZGRkMGBAFBg8PDxUYFwEEGRkZGRgYFw4FBQUXFwEEGRkZ
+GRkZDA0XFxcXDQEEGRkZGRkZGRkCAQEBAQIEGRkZGRkZGRkZGRkZGRkZGRkZGRn//wAA8B8AAOAP
+AADABwAAgAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMABAADgAwAA8AcAAPgPAAD//wAAKAAA
+ACAAAABAAAAAAQAgAAAAAAAAEAAAEgsAABILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/kmA8/5JgPP9+
+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsIVq
+/7CFav+SYDz/kmA8/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/kmA8/5JgPP8AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAsIVq/7CFav9+UzT/flM0/8q0oP/KtKD////j////4////+P////j////4////+P////j////
+4//KtKD/yrSg/9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT/yrSg/8q0oP///+P////j////4////+P/
+///j////4////+P////j/8q0oP/KtKD/0KKC/9Cigv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT////j////4////+P////j/9+T
+XP/fk1z/35Nc/9+TXP/fk1z/35Nc/++6if/vuon////j////4///////////////////////AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35TNP///+P/
+///j////4////+P/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z/77qJ/++6if///+P////j////////
+//////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35T
+NP///+P////j/////////////O3d//zt3f/exKb/3sSm/97Epv/exKb/3sSm/97Epv/ep3v/3qd7
+/9+TXP/fk1z//+S1///ktf///////////9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+sIVq/7CFav9+UzT/flM0////4////+P////////////87d3//O3d/97Epv/exKb/3sSm/97Epv/e
+xKb/3sSm/96ne//ep3v/35Nc/9+TXP//5LX//+S1////////////0KKC/9Cigv8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAACSYDz/kmA8/8q0oP/KtKD////j////4//87d3//O3d////////////5Pr+
+/+T6/v/Y7vL/2O7y/9r36f/a9+n/5Pr+/+T6/v/ep3v/3qd7/9+TXP/fk1z////j////4//KtKD/
+yrSg/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP///+P////j//zt3f/8
+7d3////////////k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+/96ne//ep3v/35Nc/9+T
+XP///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j
+/9+TXP/fk1z/3sSm/97Epv/k+v7/5Pr+/729+v+9vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/
+5Pr+/+T6/v/ep3v/3qd7/++6if/vuon////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+
+UzT/flM0////4////+P/35Nc/9+TXP/exKb/3sSm/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gq
+i/+Rqov/pv60/6b+tP/k+v7/5Pr+/96ne//ep3v/77qJ/++6if///+P////j/35TNP9+UzT/AAAA
+AAAAAAAAAAAAAAAAAH5TNP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/
+o5Wx/2hCKv9oQir/aEIq/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4///
+/+P/flM0/35TNP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j/9+TXP/fk1z/3sSm/97E
+pv/f5v7/3+b+/6OVsf+jlbH/aEIq/2hCKv9oQir/aEIq/4m6ff+Jun3/0v/b/9L/2//exKb/3sSm
+/9+TXP/fk1z////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/
+35Nc/9+TXP/exKb/3sSm/9/m/v/f5v7/o5Wx/6OVsf9oQir/aEIq/2hCKv9oQir/ibp9/4m6ff/S
+/9v/0v/b/97Epv/exKb/35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAH5T
+NP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/o5Wx/2hCKv9oQir/aEIq
+/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4////+P/flM0/35TNP8AAAAA
+AAAAAAAAAAAAAAAAflM0/35TNP///+P////j/++6if/vuon/3qd7/96ne//k+v7/5Pr+/729+v+9
+vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/5Pr+/+T6/v/exKb/3sSm/9+TXP/fk1z////j////
+4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/77qJ/++6if/ep3v/3qd7
+/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gqi/+Rqov/pv60/6b+tP/k+v7/5Pr+/97Epv/exKb/
+35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP//
+/+P////j/9+TXP/fk1z/3qd7/96ne//k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+////
+/////////O3d//zt3f///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAkmA8
+/5JgPP/KtKD/yrSg////4////+P/35Nc/9+TXP/ep3v/3qd7/+T6/v/k+v7/2O7y/9ju8v/a9+n/
+2vfp/+T6/v/k+v7////////////87d3//O3d////4////+P/yrSg/8q0oP+SYDz/kmA8/wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/////////////5LX//+S1/9+TXP/fk1z/3qd7/96n
+e//exKb/3sSm/97Epv/exKb/3sSm/97Epv/87d3//O3d///////////////j////4/9+UzT/flM0
+/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/////////////ktf//5LX/
+35Nc/9+TXP/ep3v/3qd7/97Epv/exKb/3sSm/97Epv/exKb/3sSm//zt3f/87d3/////////////
+/+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
+/////////////////////+P////j/++6if/vuon/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z////j
+////4////+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA////////////////////////4////+P/77qJ/++6if/fk1z/35Nc/9+TXP/f
+k1z/35Nc/9+TXP///+P////j////4////+P/flM0/35TNP+whWr/sIVq/wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/yrSg/8q0oP///+P////j
+////4////+P////j////4////+P////j/8q0oP/KtKD/flM0/35TNP+whWr/sIVq/wAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/K
+tKD/yrSg////4////+P////j////4////+P////j////4////+P/yrSg/8q0oP9+UzT/flM0/7CF
+av+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAJJgPP+SYDz/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP+SYDz/
+kmA8/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkmA8/5JgPP9+UzT/flM0/35TNP9+UzT/flM0/35T
+NP9+UzT/flM0/5JgPP+SYDz/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////8AA///AAP//AAA//wAAP/wAAA/
+8AAAP8AAAA/AAAAPwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPA
+AAAD8AAAA/AAAAP8AAAP/AAAD/8AAD//AAA//8AA///AAP///////////w==
+" width="16" height="16" /></a><a href="/host/90.148.138.85" class="title text-dark">Remote Surveillance, Any time &amp;amp; Any where</a><a href="http://90.148.138.85:8041" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">90.148.138.85</li>
+<li class="hostnames text-secondary">90.148.138.85.dynamic.saudi.net.sa</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Saudi+Telecom+Company+JSC%22" class="filter-link filter-org">Saudi Telecom Company JSC</a>
+</li>
+<li><img src="/static/flags/16/SA.png" title="Saudi Arabia" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22SA%22" class="filter-link text-dark">Saudi Arabia</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Riyadh%22" class="filter-link text-dark">Riyadh</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 03:02:18 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Wed, 20 Feb 2019 05:10:26 GMT
+Content-Type: text/html
+ETag: 225-54171-1550639426
+Content-Length: 54171</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:46:02.372117</div>
+<div class="heading"><a href="/search?query=linux+upnp+avtech+http.favicon.hash%3A-194439630" class="favicon"><img src="data:image/x-icon;base64,AAABAAIAEBAAAAEACABoBQAAJgAAACAgAAABACAAqBAAAI4FAAAoAAAAEAAAACAAAAABAAgAAAAA
+AAABAAASCwAAEgsAAAABAAAAAQAAaEIqAH5TNACSYDwAibp9ALCFagDfk1wA3qd7AJmenACRqosA
+o5WxAL29+gCm/rQA0KKCAMq0oADvuokA3sSmAP/ktQDS/9sA3+b+ANju8gDa9+kA/O3dAOT6/gD/
+/+MA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAABkZGRkZGRkZGRkZGRkZGRkZGRkZBAIBAQEBAhkZGRkZGRkZBAEN
+FxcXFw0MGRkZGRkZBAEXFwUFBQ4XGBgZGRkZBAEXGBUPDw8GBRAYDBkZGQINFxUYFhMUFgYFFw0C
+GRkBFwUPFgoHCAsWBg4XARkZARcFDxIJAAADEQ8FFwEZGQEXBQ8SCQAAAxEPBRcBGRkBFw4GFgoH
+CAsWDwUXARkZAg0XBQYWExQWGBUXDQIZGRkMGBAFBg8PDxUYFwEEGRkZGRgYFw4FBQUXFwEEGRkZ
+GRkZDA0XFxcXDQEEGRkZGRkZGRkCAQEBAQIEGRkZGRkZGRkZGRkZGRkZGRkZGRn//wAA8B8AAOAP
+AADABwAAgAMAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMABAADgAwAA8AcAAPgPAAD//wAAKAAA
+ACAAAABAAAAAAQAgAAAAAAAAEAAAEgsAABILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/kmA8/5JgPP9+
+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsIVq
+/7CFav+SYDz/kmA8/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP9+UzT/kmA8/5JgPP8AAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAsIVq/7CFav9+UzT/flM0/8q0oP/KtKD////j////4////+P////j////4////+P////j////
+4//KtKD/yrSg/9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT/yrSg/8q0oP///+P////j////4////+P/
+///j////4////+P////j/8q0oP/KtKD/0KKC/9Cigv8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACwhWr/sIVq/35TNP9+UzT////j////4////+P////j/9+T
+XP/fk1z/35Nc/9+TXP/fk1z/35Nc/++6if/vuon////j////4///////////////////////AAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35TNP///+P/
+///j////4////+P/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z/77qJ/++6if///+P////j////////
+//////////////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCFav+whWr/flM0/35T
+NP///+P////j/////////////O3d//zt3f/exKb/3sSm/97Epv/exKb/3sSm/97Epv/ep3v/3qd7
+/9+TXP/fk1z//+S1///ktf///////////9Cigv/QooL/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+sIVq/7CFav9+UzT/flM0////4////+P////////////87d3//O3d/97Epv/exKb/3sSm/97Epv/e
+xKb/3sSm/96ne//ep3v/35Nc/9+TXP//5LX//+S1////////////0KKC/9Cigv8AAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAACSYDz/kmA8/8q0oP/KtKD////j////4//87d3//O3d////////////5Pr+
+/+T6/v/Y7vL/2O7y/9r36f/a9+n/5Pr+/+T6/v/ep3v/3qd7/9+TXP/fk1z////j////4//KtKD/
+yrSg/5JgPP+SYDz/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP///+P////j//zt3f/8
+7d3////////////k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+/96ne//ep3v/35Nc/9+T
+XP///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j
+/9+TXP/fk1z/3sSm/97Epv/k+v7/5Pr+/729+v+9vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/
+5Pr+/+T6/v/ep3v/3qd7/++6if/vuon////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+
+UzT/flM0////4////+P/35Nc/9+TXP/exKb/3sSm/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gq
+i/+Rqov/pv60/6b+tP/k+v7/5Pr+/96ne//ep3v/77qJ/++6if///+P////j/35TNP9+UzT/AAAA
+AAAAAAAAAAAAAAAAAH5TNP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/
+o5Wx/2hCKv9oQir/aEIq/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4///
+/+P/flM0/35TNP8AAAAAAAAAAAAAAAAAAAAAflM0/35TNP///+P////j/9+TXP/fk1z/3sSm/97E
+pv/f5v7/3+b+/6OVsf+jlbH/aEIq/2hCKv9oQir/aEIq/4m6ff+Jun3/0v/b/9L/2//exKb/3sSm
+/9+TXP/fk1z////j////4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/
+35Nc/9+TXP/exKb/3sSm/9/m/v/f5v7/o5Wx/6OVsf9oQir/aEIq/2hCKv9oQir/ibp9/4m6ff/S
+/9v/0v/b/97Epv/exKb/35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAH5T
+NP9+UzT////j////4//fk1z/35Nc/97Epv/exKb/3+b+/9/m/v+jlbH/o5Wx/2hCKv9oQir/aEIq
+/2hCKv+Jun3/ibp9/9L/2//S/9v/3sSm/97Epv/fk1z/35Nc////4////+P/flM0/35TNP8AAAAA
+AAAAAAAAAAAAAAAAflM0/35TNP///+P////j/++6if/vuon/3qd7/96ne//k+v7/5Pr+/729+v+9
+vfr/mZ6c/5menP+Rqov/kaqL/6b+tP+m/rT/5Pr+/+T6/v/exKb/3sSm/9+TXP/fk1z////j////
+4/9+UzT/flM0/wAAAAAAAAAAAAAAAAAAAAB+UzT/flM0////4////+P/77qJ/++6if/ep3v/3qd7
+/+T6/v/k+v7/vb36/729+v+Znpz/mZ6c/5Gqi/+Rqov/pv60/6b+tP/k+v7/5Pr+/97Epv/exKb/
+35Nc/9+TXP///+P////j/35TNP9+UzT/AAAAAAAAAAAAAAAAAAAAAJJgPP+SYDz/yrSg/8q0oP//
+/+P////j/9+TXP/fk1z/3qd7/96ne//k+v7/5Pr+/9ju8v/Y7vL/2vfp/9r36f/k+v7/5Pr+////
+/////////O3d//zt3f///+P////j/8q0oP/KtKD/kmA8/5JgPP8AAAAAAAAAAAAAAAAAAAAAkmA8
+/5JgPP/KtKD/yrSg////4////+P/35Nc/9+TXP/ep3v/3qd7/+T6/v/k+v7/2O7y/9ju8v/a9+n/
+2vfp/+T6/v/k+v7////////////87d3//O3d////4////+P/yrSg/8q0oP+SYDz/kmA8/wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/////////////5LX//+S1/9+TXP/fk1z/3qd7/96n
+e//exKb/3sSm/97Epv/exKb/3sSm/97Epv/87d3//O3d///////////////j////4/9+UzT/flM0
+/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/////////////ktf//5LX/
+35Nc/9+TXP/ep3v/3qd7/97Epv/exKb/3sSm/97Epv/exKb/3sSm//zt3f/87d3/////////////
+/+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
+/////////////////////+P////j/++6if/vuon/35Nc/9+TXP/fk1z/35Nc/9+TXP/fk1z////j
+////4////+P////j/35TNP9+UzT/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA////////////////////////4////+P/77qJ/++6if/fk1z/35Nc/9+TXP/f
+k1z/35Nc/9+TXP///+P////j////4////+P/flM0/35TNP+whWr/sIVq/wAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANCigv/QooL/yrSg/8q0oP///+P////j
+////4////+P////j////4////+P////j/8q0oP/KtKD/flM0/35TNP+whWr/sIVq/wAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA0KKC/9Cigv/K
+tKD/yrSg////4////+P////j////4////+P////j////4////+P/yrSg/8q0oP9+UzT/flM0/7CF
+av+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAJJgPP+SYDz/flM0/35TNP9+UzT/flM0/35TNP9+UzT/flM0/35TNP+SYDz/
+kmA8/7CFav+whWr/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAkmA8/5JgPP9+UzT/flM0/35TNP9+UzT/flM0/35T
+NP9+UzT/flM0/5JgPP+SYDz/sIVq/7CFav8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD///////////8AA///AAP//AAA//wAAP/wAAA/
+8AAAP8AAAA/AAAAPwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPAAAADwAAAA8AAAAPA
+AAAD8AAAA/AAAAP8AAAP/AAAD/8AAD//AAA//8AA///AAP///////////w==
+" width="16" height="16" /></a><a href="/host/220.132.94.182" class="title text-dark">Remote Surveillance, Any time &amp;amp; Any where</a><a href="http://220.132.94.182:80" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">220.132.94.182</li>
+<li class="hostnames text-secondary">220-132-94-182.hinet-ip.hinet.net</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Chunghwa+Telecom+Co.+Ltd.%22" class="filter-link filter-org">Chunghwa Telecom Co.,Ltd.</a>
+</li>
+<li><img src="/static/flags/16/TW.png" title="Taiwan" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22TW%22" class="filter-link text-dark">Taiwan</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22Jiayi+Shi%22" class="filter-link text-dark">Jiayi Shi</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Wed, 12 Jan 2022 06:46:01 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Fri, 08 May 2020 08:46:42 GMT
+Content-Type: text/html
+ETag: 230-57782-1588927602
+Content-Length: 57782</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T22:45:58.142916</div>
+<div class="heading"><a href="/host/38.39.18.189" class="title text-dark">::: Login :::</a><a href="http://38.39.18.189:8001" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">38.39.18.189</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Netspectrum+Wireless+Internet+Solutions%22" class="filter-link filter-org">Netspectrum Wireless Internet Solutions</a>
+</li>
+<li><img src="/static/flags/16/CA.png" title="Canada" width="16" height="16" class="flag" /><a href="/search?query=linux+upnp+avtech+country%3A%22CA%22" class="filter-link text-dark">Canada</a>,&nbsp;<a href="/search?query=linux+upnp+avtech+city%3A%22North+Bay%22" class="filter-link text-dark">North Bay</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Tue, 11 Jan 2022 17:45:57 GMT
+Server: <strong class="text-danger">Linux</strong>/2.x <strong class="text-danger">UPnP</strong>/1.0 <strong class="text-danger">Avtech</strong>/1.0
+Connection: close
+Last-Modified: Fri, 15 Apr 2016 10:32:33 GMT
+Content-Type: text/html
+ETag: 307-16695-1460716353
+Content-Length: 16695</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="pagination"><a href="/search?query=linux+upnp+avtech&amp;page=2" class="button">Next</a>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+ <li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script src="/static/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-world-mill-en.js"></script>
+<script>(function() {
+    function initWorldMap() {
+        $worldmap = $('#worldmap')
+        if (!$worldmap.length) {
+            return;
+        }
+
+        let worldmapdata = {"MY": 41941, "TH": 32512, "TW": 13264, "ID": 13128, "SA": 10552, "VN": 9039, "MX": 8892, "LK": 8533, "SG": 7981, "BN": 7682, "CN": 7390, "US": 5754, "MU": 2341, "JP": 1951, "CH": 1939, "DE": 1842, "SE": 1481, "HK": 1410, "CA": 1226, "TR": 1174, "RU": 1173, "IT": 1140, "FR": 1109, "GB": 1078, "AR": 1035, "BD": 973, "CZ": 746, "IN": 724, "NL": 715, "BR": 704, "MA": 663, "IR": 602, "RO": 573, "AU": 571, "ZA": 442, "GH": 438, "PT": 413, "JO": 363, "DO": 345, "GR": 300, "PH": 246, "DZ": 201, "KH": 185, "BE": 183, "NO": 164, "LB": 139, "ES": 122, "AT": 115, "NZ": 112, "MO": 102, "PA": 102, "VE": 86, "HU": 81, "TN": 79, "PL": 76, "EG": 73, "BH": 58, "KR": 46, "IE": 43, "KW": 41, "IL": 38, "DK": 35, "PK": 32, "SK": 32, "UA": 31, "MK": 29, "LT": 26, "AE": 24, "SY": 22, "CI": 21, "CO": 20, "MT": 20, "KZ": 19, "PE": 17, "BY": 16, "HR": 15, "MV": 15, "UY": 14, "CL": 12, "EC": 12, "HN": 12, "GT": 8, "PY": 8, "BG": 7, "FI": 7, "NG": 7, "AM": 6, "GU": 6, "PR": 6, "AZ": 5, "BA": 5, "MD": 5, "NC": 5, "RS": 5, "CV": 4, "GQ": 4, "LA": 4, "LV": 4, "LY": 4, "PS": 4};
+        $worldmap.empty();
+        $worldmap.vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            zoomOnScroll: false,
+            regionStyle: {
+                initial: {
+                    'stroke': '#404040',
+                    'stroke-width': 0.5,
+                    'stroke-opacity': 1,
+                },
+            },
+            series: {
+                regions: [{
+                    values: worldmapdata,
+                    scale: ['#FFDBDB', '#C60F13'],
+                    normalizeFunction: 'polynomial',
+                }],
+            },
+            onRegionLabelShow: function(event, label, code) {
+                let count = worldmapdata[code] || 0;
+                label.html(
+                    '<b>' + label.text() + '</b><br/>' +
+                    'Hosts: ' + count.toLocaleString(),
+                );
+            }
+        });
+    }
+
+    setTimeout(initWorldMap, 500);
+})()
+</script>
+</body>
+</html>

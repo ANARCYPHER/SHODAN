@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Search Engine</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div>
+<section>
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h3 class="heading-highlight"><span>Shodan Products</span>
+</h3>
+<h6 class="grid-heading"><span>Main Websites</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-red card-padding">
+ <h1><i class="far fa-globe  fa-fw "></i>&nbsp;Shodan<em>Search</em>
+</h1>
+<p>The main search engine that makes the information collected by Shodan available through a website.</p><br /><a href="https://www.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns card card-yellow card-padding">
+<h1><i class="far fa-sitemap  fa-fw "></i>&nbsp; Shodan<em>Monitor</em>
+</h1>
+<p>Keep track of all your devices that are directly accessible from the Internet. Shodan provides a comprehensive view of all exposed services to help you stay secure.</p><a href="https://monitor.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns card card-green card-padding">
+<h1><i class="far fa-map  fa-fw "></i>&nbsp;Shodan<em>Maps</em>
+</h1>
+<p>Explore the world of Internet-connected devices using a map. Zoom in, pan around and narrow down results based on the GeoIP information.</p><a href="https://maps.shodan.io" class="button">Visit Website</a>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-purple card-padding">
+<h1><i class="far fa-image  fa-fw "></i>&nbsp;Shodan<em>Images</em>
+</h1>
+<p>Shodan collects screenshots for many different services and as a member you get access to a new search interface that makes browsing those screenshots much easier.</p><a href="https://images.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns card card-light-blue card-padding">
+<h1><i class="far fa-life-ring  fa-fw "></i>&nbsp; Shodan<em>Help Center</em>
+</h1>
+<p>Not sure where to get started? Check out our Help Center where we have articles for many common use cases. If there's something we're not yet answering there let us know!</p><a href="https://help.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns card card-light-red card-padding">
+<h1><i class="far fa-analytics  fa-fw "></i>&nbsp;Shodan<em>Trends</em>
+</h1>
+<p>Search the historical data that Shodan's collected to discover trends across the Internet.</p><br /><a href="https://trends.shodan.io" class="button">Visit Website</a>
+</div>
+</div><br /><br />
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>Data Services</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-light-green card-padding">
+<h1><i class="far fa-cogs  fa-fw "></i>&nbsp; Shodan<em>Developer API</em>
+</h1>
+<p>All Shodan websites are built entirely on-top of the same public Shodan API that all of our users have access to.</p><br /><a href="https://developer.shodan.io" class="button">Visit Website</a>
+</div>
+<div style="border-top:2px solid black" class="four columns card card-padding">
+<h1><i class="far fa-briefcase  fa-fw "></i>&nbsp; Shodan<em>Enterprise</em>
+</h1>
+<p>Full, unlimited access to all aspects of the Shodan platform - including bulk data access. The enterprise product gives organizations unprecedented insight about the Internet.</p><a href="https://enterprise.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns"></div>
+</div><br /><br />
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>Research Projects</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-orange card-padding">
+<h1><i class="far fa-bug  fa-fw "></i>&nbsp;Shodan<em>Exploits</em>
+</h1>
+<p>A search engine for actual exploits based on what's available in ExploitDB and Metasploit.</p><a href="https://exploits.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns card card-light-blue card-padding">
+<h1><i class="far fa-sitemap  fa-fw "></i>&nbsp; Internet<em>Exposure Observatory</em>
+ </h1>
+<p>How secure is your country? The Internet Exposure Observatory provides a high-level view of the services that are exposed in a country.</p><a href="https://exposure.shodan.io" class="button">Visit Website</a>
+</div>
+<div class="four columns card card-purple card-padding">
+<h1><i class="far fa-tv-retro  fa-fw "></i><em>Shodan 2000</em>
+</h1>
+<p>Explore the Internet in style using an 80's retro-futuristic interface to synthwave music.</p><a href="https://2000.shodan.io" class="button">Visit Website</a>
+</div>
+</div><br />
+</div>
+</section><br /><br />
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

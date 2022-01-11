@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>&#34;default password&#34; - Shodan Search</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@shodanhq" />
+<meta name="twitter:creator" content="@achillean" />
+<meta name="twitter:title" content="Shodan Search" />
+<meta name="twitter:image" content="https://www.shodan.io/search/report.png?query=%22default+password%22" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shodan Search" />
+<meta property="og:image" content="https://www.shodan.io/search/report.png?query=%22default+password%22" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta name="twitter:description" content="776 results found for search query: &#34;default password&#34;" />
+<meta property="og:description" content="776 results found for search query: &#34;default password&#34;" />
+<style>.tile-ssl ul {
+    margin: 0 0 0 5px;
+    padding: 0;
+}
+
+.tile-ssl li > span {
+    display: block;
+}
+</style>
+<link rel="stylesheet" href="/static/jquery/jquery-jvectormap-1.2.2.css" />
+<style>.jvectormap-zoomout,
+.jvectormap-zoomin {
+    display: none;
+}
+</style>
+<style>.l-search-results {
+    font-family: Arial;
+    overflow: hidden;
+}
+
+.l-search-results .result {
+    padding-bottom: 20px;
+}
+
+.l-search-results .result .timestamp {
+    height: 28px;
+    line-height: 28px;
+}
+
+.l-search-results .result-details {
+    line-height: 1.2;
+    font-size: 1.1rem;
+}
+
+.l-search-results .result-details ul {
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.l-search-results .result-details li {
+    margin-bottom: 3px;
+}
+
+.l-search-results .result-details li.components {
+    padding-top: 6px;
+}
+
+.l-search-results .result .columns {
+    padding: 0;
+}
+
+.l-search-results .result .hostnames{
+    word-break: break-all;
+}
+
+.l-search-results .result pre {
+    margin-top: 0;
+    overflow: hidden;
+}
+
+.l-search-results .result .flag {
+    margin-right: 4px;
+    vertical-align: text-bottom;
+}
+
+.pagination {
+    margin: 20px 0 0 0;
+}
+
+.http-tech {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+img.screenshot {
+    width: 100%;
+}
+
+.tile {
+    font-size: 1.1rem;
+}
+
+.tile h1 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+#worldmap {
+    height: 120px;
+    padding: 8px 0;
+}
+
+#shodan-links a {
+    display: inline-block;
+    margin: 0 10px 10px 0;
+    padding: 4px 2px;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." value="&#34;default password&#34;" autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br />
+<div class="container u-full-width card card-padding">
+<div class="row l-search-results">
+<div class="three columns summary">
+<h6>Total Results</h6>
+<h4>776</h4>
+<h6>Top Countries</h6>
+<div id="worldmap"></div>
+<ul>
+<li class="normalize"><a href="/search?query=%22default+password%22+country%3A%22US%22" class="text-dark">United States</a><span class="u-pull-right">144</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+country%3A%22ES%22" class="text-dark">Spain</a><span class="u-pull-right">104</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+country%3A%22RU%22" class="text-dark">Russian Federation</a><span class="u-pull-right">81</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+country%3A%22UA%22" class="text-dark">Ukraine</a><span class="u-pull-right">50</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+country%3A%22AR%22" class="text-dark">Argentina</a><span class="u-pull-right">39</span>
+</li>
+<li><a href="/search/facet?query=%22default+password%22&amp;facet=country">More...</a>
+</li>
+</ul>
+<h6>Top Ports</h6>
+<ul>
+<li class="normalize"><a href="/search?query=%22default+password%22+port%3A%2210001%22" class="text-dark">10001</a><span class="u-pull-right">508</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+port%3A%225984%22" class="text-dark">5984</a><span class="u-pull-right">51</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+port%3A%228081%22" class="text-dark">8081</a><span class="u-pull-right">36</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+port%3A%2250000%22" class="text-dark">50000</a><span class="u-pull-right">31</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+port%3A%228001%22" class="text-dark">8001</a><span class="u-pull-right">30</span>
+</li>
+<li><a href="/search/facet?query=%22default+password%22&amp;facet=port">More...</a>
+</li>
+</ul>
+<h6>Top Organizations</h6>
+<ul>
+<li class="normalize"><a href="/search?query=%22default+password%22+org%3A%22OLE+COMUNICACION+S.L.%22" class="text-dark">OLE COMUNICACION S.L.</a><span class="u-pull-right">72</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+org%3A%22Chunghwa+Telecom+Co.%2CLtd.%22" class="text-dark">Chunghwa Telecom Co.,Ltd.</a><span class="u-pull-right">21</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+org%3A%22Linode%22" class="text-dark">Linode</a><span class="u-pull-right">16</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+org%3A%22South+Central+Rural+Telecommunications+Cooperative+Inc.%22" class="text-dark">South Central Rural Telecommunications Cooperative Inc.</a><span class="u-pull-right">13</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+org%3A%22Ministry+of+Education+Computer+Center%22" class="text-dark">Ministry of Education Computer Center</a><span class="u-pull-right">12</span>
+</li>
+<li><a href="/search/facet?query=%22default+password%22&amp;facet=org">More...</a>
+</li>
+</ul>
+<h6>Top Products</h6>
+<ul>
+<li class="normalize"><a href="/search?query=%22default+password%22+product%3A%22LAP%22" class="text-dark">LAP</a><span class="u-pull-right">142</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+product%3A%22LAP-HP%22" class="text-dark">LAP-HP</a><span class="u-pull-right">67</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+product%3A%22LM5%22" class="text-dark">LM5</a><span class="u-pull-right">62</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+product%3A%22P5B-300%22" class="text-dark">P5B-300</a><span class="u-pull-right">42</span>
+</li>
+<li class="normalize"><a href="/search?query=%22default+password%22+product%3A%22NB5%22" class="text-dark">NB5</a><span class="u-pull-right">35</span>
+</li>
+<li><a href="/search/facet?query=%22default+password%22&amp;facet=product">More...</a>
+</li>
+</ul>
+</div>
+<div class="nine columns">
+<div id="shodan-links"><a href="/search/report?query=%22default+password%22" class="text-secondary card-orange"><i class="far fa-analytics  fa-fw "></i>&nbsp;View Report</a>
+<a href="https://images.shodan.io/?query=%22default%20password%22" class="text-secondary card-purple"><i class="far fa-images  fa-fw "></i>&nbsp;Browse Images</a><a href="https://maps.shodan.io/#16.720385051693988/3.515625/3/satellite/%22default%20password%22" class="text-secondary card-light-green"><i class="far fa-map  fa-fw "></i>&nbsp;View on Map</a>
+</div>
+<div style="margin-bottom: 10px; padding-left:20px" class="bg-light"><strong>New Service:&nbsp;</strong>Keep track of what you have connected to the Internet. Check out&nbsp;<a href="https://monitor.shodan.io" style="font-weight:bold" target="_blank" rel="noopener noreferrer nofollow">Shodan Monitor</a>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T21:52:30.695704</div>
+<div class="heading"><a href="/host/158.58.255.193" class="title text-dark">158.58.255.193</a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">158-58-255-193.dbr.ddns.bulsat.com</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Bulsatcom+AD%22" class="filter-link filter-org">Bulsatcom AD</a>
+</li>
+<li><img src="/static/flags/16/BG.png" title="Bulgaria" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22BG%22" class="filter-link text-dark">Bulgaria</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Dobrich%22" class="filter-link text-dark">Dobrich</a>
+</li>
+ </ul><a href="/search?query=%22default+password%22+tag%3Acompromised" class="tag">compromised</a>
+</div>
+<div class="columns ten">
+<pre>Ubiquiti Networks Device:
+  IP Address: 158.58.255.193
+  MAC Address: 00:15:6D:FC:50:0A
+  Alternate IP Address: 169.254.80.10
+  Alternate MAC Address: 00:15:6D:FD:50:0A
+  Hostname: HACKED-ROUTER-HELP-SOS-<strong class="text-danger">DEFAULT</strong>-<strong class="text-danger">PASSWORD</strong>
+  Product: LC2
+  Version: XS2.ar2316.v4.0.1.4978.111219.2121</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T19:43:29.932441</div>
+<div class="heading"><a href="/host/176.103.2.18" class="title text-dark">176.103.2.18</a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li><a href="/search?query=%22default+password%22+org%3A%22Telecompany+NKT+Dialog%22" class="filter-link filter-org">Telecompany NKT Dialog</a>
+</li>
+<li><img src="/static/flags/16/UA.png" title="Ukraine" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22UA%22" class="filter-link text-dark">Ukraine</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Kharkiv%22" class="filter-link text-dark">Kharkiv</a>
+</li>
+</ul><a href="/search?query=%22default+password%22+tag%3Acompromised" class="tag">compromised</a>
+</div>
+<div class="columns ten">
+<pre>Ubiquiti Networks Device:
+  IP Address: 176.103.2.18
+  MAC Address: 24:A4:3C:FA:3D:3E
+  Alternate IP Address: 192.168.1.1
+  Alternate MAC Address: 24:A4:3C:FB:3D:3E
+  Hostname: HACKED-ROUTER-HELP-SOS-<strong class="text-danger">DEFAULT</strong>-<strong class="text-danger">PASSWORD</strong>
+  Product: N5N
+  Version: XM.ar7240.v5.6.5.29033.160515.2119</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T19:00:44.088528</div>
+<div class="heading"><a href="/host/61.219.98.58" class="title text-dark">61.219.98.58</a><a href="http://61.219.98.58:8001" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">ecp.kinghood.com.tw</li>
+<li class="hostnames text-secondary">ecp.kinghood.com</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Chunghwa+Telecom+Co.+Ltd.%22" class="filter-link filter-org">Chunghwa Telecom Co.,Ltd.</a>
+</li>
+<li><img src="/static/flags/16/TW.png" title="Taiwan" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22TW%22" class="filter-link text-dark">Taiwan</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Taipei%22" class="filter-link text-dark">Taipei</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 401 Unauthorized
+Date: Wed, 12 Jan 2022 03:00:43 +0800
+Server: Home Cloud Service
+Accept-Ranges: bytes
+RPC-ReturnCode: 99
+RPC-ErrorMsg: service rejected by policy
+Content-Type: text/plain
+WBX-Encryption: none
+Content-Length: 0
+Vary: Accept-Encoding
+Connection: close
+WWW-Authen...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T18:14:11.421151</div>
+<div class="heading"><a href="/host/195.225.230.218" class="title text-dark">195.225.230.218</a>
+</div>
+<div class="container u-full-width">
+ <div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">218-230-225-195.kram.ua</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22KRAM%27s+public+customers+on+LANs%22" class="filter-link filter-org">KRAM&#39;s public customers on LANs</a>
+</li>
+<li><img src="/static/flags/16/UA.png" title="Ukraine" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22UA%22" class="filter-link text-dark">Ukraine</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Uzhgorod%22" class="filter-link text-dark">Uzhgorod</a>
+</li>
+</ul><a href="/search?query=%22default+password%22+tag%3Acompromised" class="tag">compromised</a>
+</div>
+<div class="columns ten">
+<pre>Ubiquiti Networks Device:
+  IP Address: 195.225.230.218
+  MAC Address: DC:9F:DB:33:48:56
+  Alternate IP Address: 192.168.1.1
+  Alternate MAC Address: DC:9F:DB:32:48:56
+  Hostname: HACKED-ROUTER-HELP-SOS-HAD-<strong class="text-danger">DEFAULT</strong>-<strong class="text-danger">PASSWORD</strong>
+  Product: LAP-HP
+  Version: XM.ar7240.v5.5.8.20991.140205.1824</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T18:07:17.427478</div>
+<div class="heading"><a href="/host/185.28.168.138" class="title text-dark">185.28.168.138</a><a href="http://185.28.168.138:10000" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li><a href="/search?query=%22default+password%22+org%3A%22Telecable+Andalucia+Comunicaciones+por+Fibra+Optica+S.L.%22" class="filter-link filter-org">Telecable Andalucia Comunicaciones por Fibra Optica S.L.</a>
+</li>
+<li><img src="/static/flags/16/ES.png" title="Spain" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22ES%22" class="filter-link text-dark">Spain</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Dos+Hermanas%22" class="filter-link text-dark">Dos Hermanas</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+CONNECTION: close
+Date: Tue, 11 Jan 2022 19:07:17 GMT
+Last-Modified: Wed, 15 Mar 2017 01:52:55 GMT
+Etag: &quot;1489542775:3793&quot;
+CONTENT-LENGTH: 14227
+CACHE-CONTROL: max-age=0
+CONTENT-TYPE: text/html
+
+&lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt; &lt;title&gt;&lt;/title&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;meta ht...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T17:33:13.081324</div>
+<div class="heading"><a href="/host/158.174.185.138" class="title text-dark">158.174.185.138</a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">h-158-174-185-138.A980.priv.bahnhof.se</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Bahnhof+AB%22" class="filter-link filter-org">Bahnhof AB</a>
+</li>
+<li><img src="/static/flags/16/SE.png" title="Sweden" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22SE%22" class="filter-link text-dark">Sweden</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Kalmar%22" class="filter-link text-dark">Kalmar</a>
+</li>
+</ul><a href="/search?query=%22default+password%22+tag%3Acompromised" class="tag">compromised</a>
+</div>
+<div class="columns ten">
+<pre>Ubiquiti Networks Device:
+  IP Address: 158.174.185.138
+  MAC Address: 68:72:51:0B:AF:2C
+  Alternate IP Address: 169.254.175.44
+  Alternate MAC Address: 68:72:51:0A:AF:2C
+  Hostname: HACKED-ROUTER-HELP-SOS-<strong class="text-danger">DEFAULT</strong>-<strong class="text-danger">PASSWORD</strong>
+  Product: LAP-HP
+  Version: XM.ar7240.v5.5.6.17762.130528.1755</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T13:39:31.307427</div>
+<div class="heading"><a href="/host/68.15.113.246" class="title text-dark">68.15.113.246</a><a href="http://68.15.113.246:80" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">wsip-68-15-113-246.ok.ok.cox.net</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Cox+Communications+Inc.%22" class="filter-link filter-org">Cox Communications Inc.</a>
+</li>
+<li><img src="/static/flags/16/US.png" title="United States" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22US%22" class="filter-link text-dark">United States</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Oklahoma+City%22" class="filter-link text-dark">Oklahoma City</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 401 
+Date: Sat, 21 Dec 1996 12:00:00 GMT
+WWW-Authenticate: Basic realm=&quot;<strong class="text-danger">Default</strong> <strong class="text-danger">password</strong>:1234&quot;</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T12:48:37.434344</div>
+<div class="heading"><a href="/host/37.221.145.117" class="title text-dark">37.221.145.117</a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li><a href="/search?query=%22default+password%22+org%3A%22Radio+Service+Ltd.%22" class="filter-link filter-org">Radio Service Ltd.</a>
+</li>
+<li><img src="/static/flags/16/UA.png" title="Ukraine" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22UA%22" class="filter-link text-dark">Ukraine</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Turka%22" class="filter-link text-dark">Turka</a>
+</li>
+</ul><a href="/search?query=%22default+password%22+tag%3Acompromised" class="tag">compromised</a>
+</div>
+<div class="columns ten">
+<pre>Ubiquiti Networks Device:
+  IP Address: 37.221.145.117
+  MAC Address: 24:A4:3C:AA:FD:7E
+  Alternate IP Address: 192.168.1.1
+  Alternate MAC Address: 24:A4:3C:AB:FD:7E
+  Hostname: HACKED-ROUTER-HELP-SOS-<strong class="text-danger">DEFAULT</strong>-<strong class="text-danger">PASSWORD</strong>
+  Product: AG5-HP
+  Version: XW.ar934x.v5.6.6.29183.160526.1205</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T11:36:14.531160</div>
+<div class="heading"><a href="/host/46.150.162.247" class="title text-dark">46.150.162.247</a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">46-150-162-247.broadband.opticom.net</li>
+<li><img src="/static/flags/16/RU.png" title="Russian Federation" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22RU%22" class="filter-link text-dark">Russian Federation</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Moscow%22" class="filter-link text-dark">Moscow</a>
+</li>
+</ul><a href="/search?query=%22default+password%22+tag%3Acompromised" class="tag">compromised</a>
+</div>
+<div class="columns ten">
+<pre>Ubiquiti Networks Device:
+  IP Address: 46.150.162.247
+  MAC Address: 68:72:51:2F:E0:0B
+  Alternate IP Address: 192.168.1.1
+  Alternate MAC Address: 68:72:51:2E:E0:0B
+  Hostname: HACKED-ROUTER-HELP-SOS-HAD-<strong class="text-danger">DEFAULT</strong>-<strong class="text-danger">PASSWORD</strong>
+  Product: p2N
+  Version: XM.ar7240.v5.5.8.20991.140205.1824</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="result">
+<div class="timestamp u-pull-right text-secondary normalize">2022-01-11T11:02:38.077274</div>
+<div class="heading"><a href="/host/200.59.7.132" class="title text-dark">200.59.7.132</a><a href="http://200.59.7.132:8081" target="_blank" rel="noopener noreferrer nofollow" class="text-danger"><i class="far fa-external-link  fa-fw "></i></a>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="two columns result-details">
+<ul>
+<li class="hostnames text-secondary">host132.200-59-7.cotelcam.net.ar</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22PLAZA+LOGISTICA+S.R.L.%22" class="filter-link filter-org">PLAZA LOGISTICA S.R.L.</a>
+</li>
+<li><img src="/static/flags/16/AR.png" title="Argentina" width="16" height="16" class="flag" /><a href="/search?query=%22default+password%22+country%3A%22AR%22" class="filter-link text-dark">Argentina</a>,&nbsp;<a href="/search?query=%22default+password%22+city%3A%22Buenos+Aires%22" class="filter-link text-dark">Buenos Aires</a>
+</li>
+</ul>
+</div>
+<div class="columns ten">
+<pre>HTTP/1.1 200 OK
+Date: Tue, 11 Jan 2022 11:02:37 GMT
+Server: Apache/2.4.6 (Win32) PHP/5.4.17
+X-Powered-By: PHP/5.4.17
+Set-Cookie: CAKEPHP=8ckpr3b7lo3dglf25hcb96o1b3; expires=Wed, 12-Jan-2022 11:02:37 GMT; path=/; HttpOnly
+Content-Length: 3147
+Content-Type: text/html; charset=UTF-8
+
+﻿&lt;!DOCT...</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="pagination"><a href="/search?query=%22default+password%22&amp;page=2" class="button">Next</a>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script src="/static/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-world-mill-en.js"></script>
+<script>(function() {
+    function initWorldMap() {
+        $worldmap = $('#worldmap')
+        if (!$worldmap.length) {
+            return;
+        }
+
+        let worldmapdata = {"US": 144, "ES": 104, "RU": 81, "UA": 50, "AR": 39, "TW": 38, "BR": 31, "CA": 29, "IR": 29, "CN": 23, "IN": 18, "BG": 10, "BW": 10, "TH": 10, "DE": 9, "FR": 9, "AU": 8, "CO": 8, "CZ": 8, "GB": 7, "SE": 7, "IE": 6, "IT": 6, "JP": 6, "PL": 6, "SG": 5, "ZA": 5, "MX": 4, "MY": 4, "NL": 4, "RO": 4, "VN": 4, "AD": 3, "EC": 3, "HU": 3, "SK": 3, "VE": 3, "BA": 2, "BE": 2, "CL": 2, "EG": 2, "KE": 2, "LT": 2, "LV": 2, "PT": 2, "RS": 2, "TG": 2, "TZ": 2, "AL": 1, "AT": 1, "DK": 1, "FI": 1, "GE": 1, "GH": 1, "GU": 1, "ID": 1, "KZ": 1, "ME": 1, "PE": 1, "TR": 1};
+        $worldmap.empty();
+        $worldmap.vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            zoomOnScroll: false,
+            regionStyle: {
+                initial: {
+                    'stroke': '#404040',
+                    'stroke-width': 0.5,
+                    'stroke-opacity': 1,
+                },
+            },
+            series: {
+                regions: [{
+                    values: worldmapdata,
+                    scale: ['#FFDBDB', '#C60F13'],
+                    normalizeFunction: 'polynomial',
+                }],
+            },
+            onRegionLabelShow: function(event, label, code) {
+                let count = worldmapdata[code] || 0;
+                label.html(
+                    '<b>' + label.text() + '</b><br/>' +
+                    'Hosts: ' + count.toLocaleString(),
+                );
+            }
+        });
+    }
+
+    setTimeout(initWorldMap, 500);
+})()
+</script>
+</body>
+</html>

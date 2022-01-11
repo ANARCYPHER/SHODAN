@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Memory As A Service</title>
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=e6594bdeac" />
+<link rel="stylesheet" type="text/css" href="/assets/css/shodan.css?v=e6594bdeac" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+<link rel="canonical" href="http://blog.shodan.io/memory-as-a-service/" />
+<meta name="referrer" content="origin" />
+<meta property="og:site_name" content="Shodan Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Memory As A Service" />
+<meta property="og:description" content="I&#x27;ve written and presented on the topic of insecure databases for nearly 2 years now. The example I use the most to demonstrate the problem is MongoDB because it&#x27;s popular and had terrible defaults. Invariably though the focus of the conversation ends up on MongoDB and not that there are" />
+<meta property="og:url" content="http://blog.shodan.io/memory-as-a-service/" />
+<meta property="og:image" content="http://blog.shodan.io/content/images/2015/12/artificial-engine_00229391.jpg" />
+<meta property="article:published_time" content="2015-12-17T07:13:47.442Z" />
+<meta property="article:modified_time" content="2015-12-17T07:18:04.519Z" />
+<meta property="article:tag" content="research" />
+<meta property="article:tag" content="mongo" />
+<meta property="article:tag" content="Memcached" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Memory As A Service" />
+<meta name="twitter:description" content="I&#x27;ve written and presented on the topic of insecure databases for nearly 2 years now. The example I use the most to demonstrate the problem is MongoDB because it&#x27;s popular and had terrible defaults. Invariably though the focus of the conversation ends up on MongoDB and not that there are" />
+<meta name="twitter:url" content="http://blog.shodan.io/memory-as-a-service/" />
+<meta name="twitter:image:src" content="http://blog.shodan.io/content/images/2015/12/artificial-engine_00229391.jpg" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="John Matherly" />
+<meta name="twitter:label2" content="Filed under" />
+<meta name="twitter:data2" content="research, mongo, Memcached" />
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Shodan Blog",
+    "author": {
+        "@type": "Person",
+        "name": "John Matherly",
+        "image": "http://blog.shodan.io/content/images/2015/07/headshot.jpg",
+        "url": "http://blog.shodan.io/author/john/",
+        "sameAs": "https://www.shodan.io"
+    },
+    "headline": "Memory As A Service",
+    "url": "https://blog.shodan.io/memory-as-a-service/",
+    "datePublished": "2015-12-17T07:13:47.442Z",
+    "dateModified": "2015-12-17T07:18:04.519Z",
+    "image": "http://blog.shodan.io/content/images/2015/12/artificial-engine_00229391.jpg",
+    "keywords": "research, mongo, Memcached",
+    "description": "I&#x27;ve written and presented on the topic of insecure databases for nearly 2 years now. The example I use the most to demonstrate the problem is MongoDB because it&#x27;s popular and had terrible defaults. Invariably though the focus of the conversation ends up on MongoDB and not that there are"
+}
+    </script>
+<meta name="generator" content="Ghost 0.7" />
+<link rel="alternate" type="application/rss+xml" title="Shodan Blog" href="https://blog.shodan.io/rss/" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41147626-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-research tag-mongo tag-memcached">
+<div class="quicknav">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://scanhub.shodan.io">Scanhub</a>
+</li>
+<li><a href="https://developer.shodan.io">Developers</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">View All...</a>
+</li>
+</ul>
+<div class="clear">
+</div>
+</div>
+<header class="main-header post-head " style="background-image: url(/content/images/2015/12/artificial-engine_00229391.jpg)">
+<nav class="main-nav overlay clearfix">
+<a class="back-button icon-arrow-left" href="http://blog.shodan.io">Home</a>
+<a class="subscribe-button icon-twitter" href="https://twitter.com/shodanhq">Twitter</a>
+<a class="subscribe-button icon-facebook" href="https://www.facebook.com/pages/Shodan/118600941553523">Facebook</a>
+<a class="subscribe-button icon-feed" href="http://blog.shodan.io/rss/">Subscribe</a>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="post tag-research tag-mongo tag-memcached">
+<header class="post-header">
+<h1 class="post-title">Memory As A Service</h1>
+<section class="post-meta">
+<time class="post-date" datetime="2015-12-17">17 December 2015</time> on <a href="/tag/research/">research</a>, <a href="/tag/mongo/">mongo</a>, <a href="/tag/memcached/">Memcached</a>
+</section>
+</header>
+<section class="post-content">
+<p>I've written and presented on the topic of insecure databases for nearly 2 years now. The example I use the most to demonstrate the problem is MongoDB because it's popular and had <a href="https://blog.shodan.io/its-still-the-data-stupid/">terrible defaults</a>. Invariably though the focus of the conversation ends up on MongoDB and not that there are hundreds of thousands of databases on the Internet without any authentication.</p>
+<p>So for today I decided to take a look at something else: <a href="http://memcached.org/">Memcached</a>. Their website explains it best:</p>
+<blockquote>
+<p>Memcached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) from results of database calls, API calls, or page rendering.</p>
+</blockquote>
+<p>Do you operate a website? Does it get a lot of traffic? Then memcached is what you need to speed up response times by caching database lookups, web responses or anything else that takes more than a second to accomplish.</p>
+<p>Shodan shows there are <a href="https://www.shodan.io/report/IsKj8RXU">more than 130,000 Memcached servers</a> running on the Internet. And they also return a lot of detailed information about their status:</p>
+<p><img src="/content/images/2015/12/Firefox_Screenshot_2015-12-17T06-22-15-983Z.png" alt="" /></p>
+<p>Memcached provides its uptime, version, current number of connections, how much is being stored and much more. For now, I just took a look at the amount of data stored and how much memory is made available. Aggregating all the information from the publicly-available Memcached instances here are some stats:</p>
+<ul>
+<li><strong>8 TB</strong> of data stored</li>
+<li><strong>49,153 PB</strong> of memory collectively available</li>
+</ul>
+<p>Since Memcached is a caching layer we wouldn't expect to see a lot of data stored in it on a permanent basis (records also usually have an expiration attached). And it doesn't offer advanced querying as a regular database would, which makes navigating the 8 TB of data more difficult than with MongoDB. That being said, there is still a lot of sensitive information that is temporarily stored on these instances. However, there is also a ridiculously giant amount of memory available on public Memcached servers. For people not familiar with petabytes, the total amount of memory advertised is <strong>49,153,000 TB</strong>.</p>
+<p>The organizations that are hosting the most instances are:</p>
+<p><img src="/content/images/2015/12/Firefox_Screenshot_2015-12-17T06-35-04-260Z.png" alt="" /></p>
+<ol>
+<li><strong>ColoCrossing</strong> </li>
+<li><strong>GoDaddy</strong> </li>
+<li><strong>Enzu</strong> </li>
+<li><strong>Aliyun</strong> </li>
+<li><strong>Alibaba Advertising</strong></li>
+</ol>
+<p>One of the reason for all these publicly accessible instances is the same as with MongoDB: the official, default configuration of Memcached listens on all interfaces. Curiously, the Linux distributions I looked at that are offering Memcached packages provided secure defaults; i.e. only listen on <em>localhost</em>. This means that most likely the above organizations installed Memcached from source.</p>
+<p>I hope this has provided some evidence that it's not just MongoDB facing insecure-by-default issues when it comes to data storage services. I could've performed the same analysis as above for <a href="https://www.shodan.io/search?query=product%3Aredis">Redis</a>, <a href="https://www.shodan.io/search?query=product%3Acassandra">Cassandra</a>, <a href="https://www.shodan.io/search?query=product%3Acouchdb">CouchDB</a> or <a href="https://www.shodan.io/search?query=port%3A8098+mochiweb">Riak</a>.</p>
+</section>
+<footer class="post-footer">
+<figure class="author-image">
+<a class="img" href="/author/john/" style="background-image: url(/content/images/2015/07/headshot.jpg)"><span class="hidden">John Matherly's Picture</span></a>
+</figure>
+<section class="author">
+<h4><a href="/author/john/">John Matherly</a></h4>
+<p>Read <a href="/author/john/">more posts</a> by this author.</p>
+<div class="author-meta">
+<span class="author-location icon-location">Austin, TX</span>
+<span class="author-link icon-link"><a href="https://www.shodan.io">https://www.shodan.io</a></span>
+</div>
+</section>
+<section class="share">
+<h4>Share this post</h4>
+<a class="icon-twitter" href="https://twitter.com/share?text=Memory%20As%20A%20Service&amp;url=https://blog.shodan.io/memory-as-a-service/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class="hidden">Twitter</span>
+</a>
+<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.shodan.io/memory-as-a-service/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class="hidden">Facebook</span>
+</a>
+<a class="icon-google-plus" href="https://plus.google.com/share?url=https://blog.shodan.io/memory-as-a-service/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class="hidden">Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<footer class="site-footer clearfix">
+<section class="copyright"><a href="http://blog.shodan.io">Shodan Blog</a> &copy; 2022</section>
+</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=e6594bdeac"></script>
+<script type="text/javascript" src="/assets/js/index.js?v=e6594bdeac"></script>
+</body>
+</html>

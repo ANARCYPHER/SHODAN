@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Monitor</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="https://static.shodan.io/shodan/img/favicon.png" type="image/x-icon">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<style>.notifiers img {
+    height: 50px;
+    margin-top: 23px;
+    width: auto;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row bg-img-dark">
+<div class="twelve columns">
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="https://static.shodan.io/shodan-ds/img/logo.png" alt="Shodan" /><span>Monitor</span></a>
+<ul class="menu sub-menu">
+<li><a href="/"><i class="fas fa-home  fa-fw "></i>Overview</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing&nbsp;
+<i style="font-size: 1.1rem" class="fa fa-external-link   "></i></a>
+</li>
+<li><a href="/dashboard" class="highlight"><i class="fas fa-analytics  fa-fw "></i>Access Portal</a>
+</li>
+</ul>
+</div>
+<div class="u-cf"></div>
+<div class="container">
+<div class="row banner">
+<div class="five columns tagline">
+<h1><span>Know What's Connected</span>
+</h1>
+<h2><span>Keep track of the devices that you have exposed to the Internet. Setup notifications, launch scans and gain complete visibility into what you have connected.</span>
+</h2><a href="https://account.shodan.io/billing" rel="noreferrer noopener" class="button  button-primary">Sign Up Now</a>
+</div>
+<div class="seven columns image tagline"><img src="/static/img/pingmap.png" alt="Map of the Internet" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<main>
+<div class="bg-solid">
+<div class="container">
+<section class="row">
+<div class="six columns">
+<h4 class="heading-highlight"><span>Network Monitoring Made Easy</span>
+</h4>
+<p>Within 5 minutes of using Shodan Monitor you will see what you currently have connected to the Internet within your network range and be setup with real-time notifications when something unexpected shows up.</p>
+</div>
+<div class="six columns"><img src="/static/img/dashboard.png" alt="Shodan Monitor Dashboard" />
+</div>
+</section><br /><br />
+<section class="row">
+<div class="six columns"><img src="/static/img/exposure_map.png" alt="Exposure Map of IPs" />
+</div>
+<div class="six columns">
+<h4 class="heading-highlight"><span>Built to Scale</span>
+</h4>
+<p>Whether you want to monitor 1 IP or you're an ISP with millions of customers - the Shodan platform was built to handle networks of all sizes without breaking a sweat.</p>
+</div>
+</section><br /><br />
+<section class="row">
+<div class="six columns">
+<h4 class="heading-highlight"><span>Security Beyond the Perimeter</span>
+</h4>
+<p>The Shodan platform helps you monitor not just your known network but also find your devices across the Internet. Detect data leaks to the cloud, phishing websites, compromised databases and more. Shodan gives you the tools to monitor all your connected devices on the Internet.</p>
+</div>
+<div class="six columns">
+<h4 class="heading-highlight"><span>Just the Facts</span>
+</h4>
+<p>Tired of busy dashboards with too much unnecessary information? Shodan Monitor is designed to help you quickly hone in the most important issues. Take advantage of our years of experience crawling the Internet to provide context and filter out the noise.</p>
+</div>
+</section><br /><br />
+</div>
+</div>
+<section>
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>Monitor Components</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-yellow card-padding">
+<h1><i class="far fa-cogs   "></i><em>Developer-friendly</em>API
+</h1>
+<p>All features of the Shodan Monitor website are also available via the Shodan API and <a href="https://asciinema.org/a/231048" target="_blank" rel="noreferrer nofollow noopener">command-line interface</a>.
+</p>
+</div>
+<div class="four columns card card-red card-padding">
+<h1><i class="far fa-bullseye   "></i><em>On-Demand</em>Scanning
+</h1>
+<p>Use Shodan's global infrastructure to scan networks to confirm that an issue has been fixed.</p>
+</div>
+<div class="four columns card card-blue card-padding">
+<h1><i class="far fa-sitemap   "></i><em>Batteries</em>Included
+</h1>
+<p>A subscription to our API plans gives access to Shodan Monitor, the search engine, API and a whole range of websites.</p>
+</div>
+</div><br />
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>Notification Options</span>
+</h6>
+</div>
+</div>
+<div class="row notifiers">
+<div class="three columns card u-center"><span style="font-size: 5rem"><i class="far fa-envelope   "></i></span>
+<h1><em>Email</em>
+</h1>
+</div>
+<div class="three columns card u-center"><img src="/static/img/notifiers/slack.svg" alt="" />
+<h1><em>Slack</em>
+</h1>
+</div>
+<div class="three columns card u-center"><img src="/static/img/notifiers/msteams.svg" alt="" />
+<h1><em>MS Teams</em>
+</h1>
+</div>
+<div class="three columns card u-center"><img src="/static/img/notifiers/discord.svg" alt="" />
+<h1><em>Discord</em>
+</h1>
+</div>
+</div>
+<div class="row notifiers">
+<div class="three columns card u-center"><img src="/static/img/notifiers/telegram.svg" alt="" />
+<h1><em>Telegram</em>
+</h1>
+</div>
+<div class="three columns card u-center"><img src="/static/img/notifiers/gitter.svg" alt="" />
+<h1><em>Gitter</em>
+</h1>
+</div>
+<div class="three columns card u-center"><img src="/static/img/notifiers/pagerduty.png" alt="" />
+<h1><em>Pagerduty</em>
+</h1>
+</div>
+<div class="three columns card u-center"><span style="font-size: 5rem"><i class="far fa-code   "></i></span>
+<h1><em>Webhook</em>
+</h1>
+</div>
+</div><br />
+<section class="row">
+<div class="six columns card card-padding">
+<h4 class="heading-highlight">Frequently Asked Questions</h4><strong>How many IPs can I monitor?</strong>
+<p>Shodan Monitor supports everything from individual IPs up to tracking of events across the entire Internet. To see how many IPs or networks you're currently able to monitor please visit the&nbsp;<a href="https://developer.shodan.io/dashboard" rel="noreferrer noopener"><strong>Shodan Developer dashboard.</strong></a>
+</p><strong>Do I need to submit scans?</strong>
+<p>No, Shodan Monitor automatically and continuously crawls the network ranges that are being monitored. If you want to request an immediate scan then you can do that by visiting the <a href="/networks" style="font-weight:bold">Manage Networks</a> page.
+</p><strong>Can I access the raw events from my program?</strong>
+<p>Yes, Shodan Monitor is built ontop of the existing Shodan API. Specifically, we are taking advantage of the Network Alerts stream which contains all events for your specified network range(s). See the official streaming documentation for the details:&nbsp;<a href="https://developer.shodan.io/api/stream" rel="noreferrer noopener"><strong>Streaming API Documentation</strong></a>
+</p>
+</div>
+<div class="six columns card card-padding">
+<h4 class="heading-highlight">See it in Action</h4>
+<iframe width="100%" height="300" src="https://www.youtube-nocookie.com/embed/T-9UvZ-l-tE?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+</div>
+</section>
+<div class="u-center"><a href="https://account.shodan.io/billing" rel="noreferrer noopener" class="button  button-primary">Sign Up Now</a>
+</div>
+</div>
+</section>
+</main>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+ <li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" class="f-lightgrey"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan/" class="f-lightgrey"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" class="f-lightgrey"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+    </script>
+</body>
+</html>

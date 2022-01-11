@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenSearchDescription
+    xmlns="http://a9.com/-/spec/opensearch/1.1/"
+    xmlns:referrer="http://a9.com/-/opensearch/extensions/referrer/1.0/">
+  <ShortName>Shodan</ShortName>
+  <Description>Search Shodan</Description>
+  <Image width="16" height="16">https://www.shodan.io/static/img/favicon.png</Image>
+  <InputEncoding>UTF-8</InputEncoding>
+  <SearchForm>https://www.shodan.io</SearchForm>
+  <Url type="text/html" method="GET"
+    template="https://www.shodan.io/search?query={searchTerms}&amp;ref=os"/>
+  <Url type="application/opensearchdescription+xml"
+       rel="self"
+       template="https://www.shodan.io/static/opensearch.xml" />
+</OpenSearchDescription>

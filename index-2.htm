@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Developer</title>
+<meta charset="utf-8">
+<meta name="description" content="Complete reference documentation for the Shodan API">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.3.2/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="https://static.shodan.io/shodan/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="https://developer.shodan.io/static/img/apple-touch-icon-192.png">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<style>#api-key-show,
+#api-key-content {
+    float: right !important;
+    border-right: none !important;
+}
+
+/* Smaller nvd3 chart grid lines */
+.nvd3 .nv-axis line {
+    stroke-width: 0.5px;
+}
+
+/* Medium devices CSS */
+@media (max-width: 900px) {
+    #api-key-content {
+        float: none !important;
+    }
+
+    /* Skip left-right padding for Account menu so Shodan Developer menu not breaks line */
+    ul.right-menu li a {
+        padding: 10px 0px 10px 0px;
+    }
+
+    .welcome .title {
+        top: 70px !important;
+    }
+}
+    </style>
+<link rel="stylesheet" href="https://developer.shodan.io/static/css/asciinema-player.css" />
+<style>.features .icon {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.features .text h4 {
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.asciinema-player {
+    opacity: .15;
+    height: 400px;
+}
+
+.asciinema-player .control-bar {
+    display: none !important;
+}
+
+.asciinema-player .asciinema-terminal {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.asciinema-player .cursor {
+    display: none !important;
+}
+
+.code-highlight {
+    color: white;
+    display: inline;
+    font-size: 1.2rem;
+}
+
+.code-highlight pre {
+    display: inline;
+}
+
+.term {
+    height: 20rem;
+    background: #111;
+    border: 1px solid #252525;
+    border-radius: 0.5rem;
+}
+
+.term-bar {
+    //- height: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #252525;
+    justify-content: space-between;
+}
+
+.term-winctrl {
+    padding: 0.5rem;
+}
+
+.term .term-btn {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    margin: 0.1rem;
+    margin-right: 4px;
+}
+
+.close {
+    background-color: #ff3b30;
+}
+
+.minimise {
+    background-color: #ffcc00;
+}
+
+.maximise {
+    background-color: #28cd41;
+}
+
+.term-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    color: #ddd;
+    margin: auto 0;
+}
+
+.term-bar-spacer {
+    display: inline-block;
+    width: 4.5rem;
+    /* this is nasty pls fix */
+    height: 2rem;
+    padding: 0.5rem;
+    text-align: right;
+    margin: 0;
+}
+
+.term-cont {
+    font-family: monospace;
+    color: #fff;
+    padding: 0.5rem;
+}
+
+.term-cmd {
+    background: none;
+    margin: 0;
+    border: 0;
+    color: inherit;
+    font-family: inherit;
+}
+
+.term-prompt {
+    padding-right: 10px;
+    user-select: none;
+}
+
+pre {
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.description code {
+    background: 0;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    white-space: pre-wrap;
+}
+
+.welcome {
+    height: 400px;
+    position: relative;
+}
+
+.welcome .title {
+    top: 120px;
+    width: 100%;
+    position: absolute;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width bg-img-dark">
+<div class="row">
+<div class="twelve columns">
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="https://static.shodan.io/shodan-ds/img/logo.png" alt="Shodan" /><span>Developer</span></a>
+<ul class="menu sub-menu">
+<li><a href="/api"><i class="fas fa-book  fa-fw "></i>API Reference</a>
+</li>
+<li><a href="/apps"><i class="fas fa-cogs  fa-fw "></i>Integrations</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing&nbsp;
+<i style="font-size: 1.1rem" class="fa fa-external-link   "></i></a>
+</li>
+</ul>
+<form></form>
+<ul class="menu main-menu right-menu">
+<li><a href="https://account.shodan.io/login" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<div class="u-cf"></div>
+</div>
+</div>
+<div class="row welcome">
+<asciinema-player src="https://developer.shodan.io/static/firehose.json" autoplay="True" preload="True" loop="True" speed="0.01" idle-time-limit="0.01"></asciinema-player>
+<div class="title u-center">
+<h2><strong class="bg-dark">&nbsp;The Internet Intelligence Platform&nbsp;</strong>
+</h2>
+<h5><span class="bg-dark text-light">&nbsp;Leverage the Shodan API to learn about devices on the Internet.&nbsp;</span>
+</h5><a href="/api/clients" class="button button-primary">Get Started</a>
+</div>
+</div>
+</div>
+<section class="container"><br />
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>Building Blocks</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-green">
+<h1><i class="far fa-network-wired  fa-fw "></i><em>IP</em>Information
+</h1>
+<p>See which ports an IP has open, what SSL/ TLS versions it supports, which country it's located in, what web technologies the website uses and much more.</p>
+</div>
+<div class="four columns card card-padding card-light-green">
+<h1><i class="far fa-database  fa-fw "></i><em>DNS</em>Database
+</h1>
+<p>Shodan has a curated DNS database that contains information about hostnames likely to run a service. Use it to help map out your organization's attack surface.</p>
+</div>
+<div class="four columns card card-padding card-light-green">
+<h1><i class="far fa-stream  fa-fw "></i>&nbsp;Data<em>Stream</em>
+</h1>
+<p>Subscribe to real-time data feeds to get notified when new ports are detected, vulnerabilities are discovered or network configurations change.</p>
+</div>
+</div>
+</section>
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="features">
+<div class="row">
+<div class="six columns">
+<div class="row">
+<div class="three columns text-success icon"><i class="far fa-wrench fa-3x  "></i>
+</div>
+<div class="nine columns text">
+<h5>Easy Integration</h5>
+<p>The Shodan API is the easiest way to provide users of your tool access to the Shodan data. The API provides access to all data stored in Shodan, allowing you to get exactly the information you want.</p>
+</div>
+</div>
+</div>
+<div class="six columns">
+<div class="row">
+<div class="three columns text-success icon"><i class="far fa-cog fa-3x  "></i>
+</div>
+<div class="nine columns text">
+<h5>Automate Everything</h5>
+<p>Use the API to automatically generate reports, notify you if something popped up on Shodan or keep track of results over time.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="six columns">
+<div class="row">
+<div class="three columns text-success icon"><i class="far fa-globe fa-3x  "></i>
+</div>
+<div class="nine columns text">
+<h5>Beyond the Web</h5>
+<p>The Shodan website only shows a small fraction of the information that is gathered. Use the API to gain full access to all the data collected and extract the information you care about.</p>
+</div>
+</div>
+</div>
+<div class="six columns">
+<div class="row">
+<div class="three columns text-success icon"><i class="far fa-signal fa-3x  "></i>
+</div>
+<div class="nine columns text">
+<h5>Real-Time Notifications</h5>
+<p>The Streaming API gives you the ability to subscribe to events in real-time so you can immediately respond to new discoveries.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="row">
+<div class="six columns">
+<div class="term term-ready card">
+<div class="term-bar">
+<div class="term-winctrl"><span class="term-btn close"></span><span class="term-btn minimise"></span><span class="term-btn maximise"></span>
+</div>
+<div class="term-title">&nbsp;</div>
+<div class="term-spacer"></div>
+</div>
+<div class="term-cont">
+<div class="term-line"><span class="term-prompt">~ $</span><span class="term-cmd current"><div class="code-highlight" style="background: rgba(0,0,0,0)"><pre style="line-height: 125%"><span></span><span style="color: #66d9ef">shodan</span> stats <span style="color: #e6db74">--facets</span> <span style="color: #f92672">port</span>:<span style="color: #ae81ff">100</span> <span style="color: #f92672">country</span>:<span style="color: #ae81ff">US</span></pre></div></span>
+</div>
+</div>
+</div>
+</div>
+<div class="six columns">
+<h4 class="heading-highlight"><span>Command-Line Friendly</span>
+</h4>
+<p>The Shodan command-line interface exposes most of the API in a user-friendly way so you can access the Shodan database without needing to write your own scripts.</p><a href="https://help.shodan.io/command-line-interface/0-installation" class="button button-blue">Install the CLI</a>
+</div>
+</section><br /><br />
+<section class="row">
+<div class="eight columns">
+<h4 class="heading-highlight"><span>API-First Development</span>
+</h4>
+<p>All Shodan websites, including Shodan Images and Shodan Monitor, are powered by the API. Anything that can be done using those websites you can also do directly via the API. To get started find an API binding in your favorite language:</p><a href="/api/clients" class="button button-blue">Browse available libraries</a>
+</div>
+<div class="four columns u-center"><img src="https://developer.shodan.io/static/img/developer.png" alt="Developer Libraries" />
+</div>
+</section><br /><br />
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" class="f-lightgrey"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan/" class="f-lightgrey"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" class="f-lightgrey"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script>(function() {
+    let quickApiKey = document.getElementById('api-key-show')
+    if (quickApiKey) {
+        quickApiKey.addEventListener('click', function(e) {
+            quickApiKey.style.display = 'none';
+            document.getElementById('api-key-content').style.display = 'block';
+        })
+    }
+})()
+    </script>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+    </script>
+<script src="https://developer.shodan.io/static/js/asciinema-player.js" defer="defer"></script>
+</body>
+</html>

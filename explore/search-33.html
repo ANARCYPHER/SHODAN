@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Explore: tags:web</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<style>.searchbox input {
+    width: 100%
+}
+
+.browse-queries {
+    padding: 18px;
+}
+
+.browse-queries .wrapper {
+    display: flex;
+}
+
+.browse-queries .content {
+    width: 100%;
+}
+
+.browse-queries h1 {
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.browse-queries a p {
+    margin-bottom: 0px;
+}
+
+.browse-queries h1, .browse-queries a p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.browse-queries .bottom {
+    margin-top: 11px;
+}
+
+.browse-queries .bottom .vote {
+    font-weight: 700;
+}
+
+.browse-categories .card {
+    margin-bottom: 3rem;
+}
+
+.browse-categories a {
+    height: 125px;
+    display: block;
+    position: relative;
+}
+
+.browse-categories a img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.browse-categories a span {
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#tags a {
+    margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br /><br />
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h3 class="heading-highlight"><span>Explore: tags:web</span>
+</h3>
+</div>
+</div>
+<div class="row">
+<div class="eight columns">
+<div class="browse-queries card"><a href="/search?query=Torrent+HTTP%2F1.0+200+OK">
+<div class="wrapper">
+<div class="content">
+<h1>Torrent</h1>
+<p class="text-secondary">Torrent server pages</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>1</span>
+<span class="tag">web</span><span class="tag">torrent</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=%22%2Fhtml%2Fmanager%22">
+<div class="wrapper">
+<div class="content">
+<h1>Managers</h1>
+<p class="text-secondary">Web managers</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>1</span>
+<span class="tag">web</span><span class="tag">managers</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=title%3A%22webrelay%22">
+<div class="wrapper">
+<div class="content">
+<h1>WebRelay</h1>
+<p class="text-secondary">https://www.controlbyweb.com/webrelay/ No idea what you are turning on or off, no password.</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>4</span>
+<span class="tag">web</span><span class="tag">relay</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=http.html%3A%27backup.zip%27">
+<div class="wrapper">
+<div class="content">
+<h1>Webserver Backups</h1>
+<p class="text-secondary">Backup files left on web root</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>3</span>
+<span class="tag">web</span><span class="tag">backup</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=country%3Air+port%3A80+title%3Aprotected">
+<div class="wrapper">
+<div class="content">
+<h1>Find Password Protected Directories In Iran</h1>
+<p class="text-secondary">Find Password Protected Directories In Iran.</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>7</span>
+<span class="tag">iran</span><span class="tag">protected</span><span class="tag">web</span><span class="tag">server</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=MJPG-Streamer+200">
+<div class="wrapper">
+<div class="content">
+<h1>Web cam&#39;s</h1>
+<p class="text-secondary">Mjpg-streamers</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>3</span>
+<span class="tag">mjpg</span><span class="tag">web</span><span class="tag">cam</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=http.favicon.hash%3A628009337">
+<div class="wrapper">
+<div class="content">
+<h1>Unprotected - Cloud torrent Instances</h1>
+<p class="text-secondary">Unprotected - Cloud torrent Instances</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>6</span>
+<span class="tag">web</span><span class="tag">torrent</span><span class="tag">default</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=title%3A%22openstage%22">
+<div class="wrapper">
+<div class="content">
+<h1>Openstage IP phone</h1>
+<p class="text-secondary">Openstage IP phone, default admin password:123456 for web interface. Also allows SSH access https://docs.google.com/viewer?pid=bl&amp;srcid=ADGEESjGNMqwAX30A4kfEyzg7ep_BggBgYguoWXVp7TtLhz6NGKqEMZ4DnBnL8G_dILDF63Bz1jU3kpgapxQHvD8eu252nc_cYOajWrdeySjjvVyPIuNjY-GYHr8x0Xue_IX7BvJtlfL&amp;q=cache%3AsnkjU5bhKdwJ%3Awiki.siemens-enterprise.com%2Fimages%2Fd%2Fd9%2FReadMe_V2_R1_100907.pdf%20&amp;docid=fcc11a2c441ee74e8832e1fb23f5d50b&amp;a=bi&amp;pagenumber=34&amp;w=722</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>5</span>
+<span class="tag">voip</span><span class="tag">ssh</span><span class="tag">web</span><span class="tag">ui</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=Content-Length%3A+3308+X-Powered-By%3A+ASP.NET">
+<div class="wrapper">
+<div class="content">
+<h1>ASP.Net Web API - Precise</h1>
+<p class="text-secondary">Precise</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>1</span>
+<span class="tag">asp.net</span><span class="tag">web api</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="browse-queries card"><a href="/search?query=title%3A%22phpvirtualbox%22">
+<div class="wrapper">
+<div class="content">
+<h1>Virtualbox in da web</h1>
+<p class="text-secondary">admin/admin</p>
+<div class="bottom"><span class="tag bg-light vote"><i class="fas fa-caret-up  fa-fw "></i>1</span>
+<span class="tag">web</span><span class="tag">php</span><span class="tag">virtualbox</span>
+</div>
+</div>
+</div></a>
+</div>
+<div class="pagination"><a href="/explore/search?query=tags%3Aweb&amp;page=1" class="button">Prev</a><a href="/explore/search?query=tags%3Aweb&amp;page=3" class="button">Next</a>
+</div>
+</div>
+<div class="four columns">
+<form action="/explore/search" method="GET" class="searchbox searchbox-with-icon"><i class="far fa-search  fa-fw "></i>
+<label for="explore-query" value="Enter explore query" class="visually-hidden"></label>
+<input id="explore-query" type="text" name="query" placeholder="Search shared queries..." autocapitalize="none" />
+</form>
+<div id="tagcloud" class="card card-padding card-orange">
+<h1><i class="far fa-tag  fa-fw "></i><em>Popular</em>Tags
+</h1>
+<div id="tags"><a href="/explore/search?query=tags%3Awebcam" class="tag">webcam</a><a href="/explore/search?query=tags%3Acam" class="tag">cam</a><a href="/explore/search?query=tags%3Acamera" class="tag">camera</a><a href="/explore/search?query=tags%3Aip" class="tag">ip</a><a href="/explore/search?query=tags%3Arouter" class="tag">router</a><a href="/explore/search?query=tags%3Ascada" class="tag">scada</a><a href="/explore/search?query=tags%3Aftp" class="tag">ftp</a><a href="/explore/search?query=tags%3Aserver" class="tag">server</a><a href="/explore/search?query=tags%3Ahttp" class="tag">http</a><a href="/explore/search?query=tags%3Aiot" class="tag">iot</a><a href="/explore/search?query=tags%3Atest" class="tag">test</a><a href="/explore/search?query=tags%3Apassword" class="tag">password</a><a href="/explore/search?query=tags%3Acisco" class="tag">cisco</a><a href="/explore/search?query=tags%3Aweb" class="tag">web</a><a href="/explore/search?query=tags%3Adefault" class="tag">default</a><a href="/explore/search?query=tags%3Alogin" class="tag">login</a><a href="/explore/search?query=tags%3Assh" class="tag">ssh</a><a href="/explore/search?query=tags%3A1" class="tag">1</a><a href="/explore/search?query=tags%3Anas" class="tag">nas</a><a href="/explore/search?query=tags%3Aipcam" class="tag">ipcam</a>
+</div>
+</div>
+<div class="card card-padding">
+<h1><i class="far fa-filter  fa-fw "></i><em>Browse</em>by
+</h1>
+<ul>
+<li><a href="/explore/recent">Recently Shared</a>
+</li>
+<li><a href="/explore/popular">Top Voted</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

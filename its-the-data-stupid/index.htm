@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>It&#x27;s the Data, Stupid!</title>
+<meta name="description" content="" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" type="text/css" href="/assets/css/screen.css?v=e6594bdeac" />
+<link rel="stylesheet" type="text/css" href="/assets/css/shodan.css?v=e6594bdeac" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic|Open+Sans:700,400" />
+<link rel="canonical" href="http://blog.shodan.io/its-the-data-stupid/" />
+<meta name="referrer" content="origin" />
+<meta property="og:site_name" content="Shodan Blog" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="It&#x27;s the Data, Stupid!" />
+<meta property="og:description" content="I would like to take a moment to discuss databases. Most people use Shodan to find devices that have web servers, but for a few years now I&#x27;ve also been crawling the Internet for various database software. I usually mention this during my talks and I&#x27;ve tried to raise awareness" />
+<meta property="og:url" content="http://blog.shodan.io/its-the-data-stupid/" />
+<meta property="og:image" content="http://blog.shodan.io/content/images/2015/07/Library-with-a-book-ladde-014.jpg" />
+<meta property="article:published_time" content="2015-07-18T21:51:42.692Z" />
+<meta property="article:modified_time" content="2015-07-20T10:01:37.068Z" />
+<meta property="article:tag" content="research" />
+<meta property="article:tag" content="MongoBD" />
+<meta property="article:tag" content="NoSQL" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="It&#x27;s the Data, Stupid!" />
+<meta name="twitter:description" content="I would like to take a moment to discuss databases. Most people use Shodan to find devices that have web servers, but for a few years now I&#x27;ve also been crawling the Internet for various database software. I usually mention this during my talks and I&#x27;ve tried to raise awareness" />
+<meta name="twitter:url" content="http://blog.shodan.io/its-the-data-stupid/" />
+<meta name="twitter:image:src" content="http://blog.shodan.io/content/images/2015/07/Library-with-a-book-ladde-014.jpg" />
+<meta name="twitter:label1" content="Written by" />
+<meta name="twitter:data1" content="John Matherly" />
+<meta name="twitter:label2" content="Filed under" />
+<meta name="twitter:data2" content="research, MongoBD, NoSQL" />
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Shodan Blog",
+    "author": {
+        "@type": "Person",
+        "name": "John Matherly",
+        "image": "http://blog.shodan.io/content/images/2015/07/headshot.jpg",
+        "url": "http://blog.shodan.io/author/john/",
+        "sameAs": "https://www.shodan.io"
+    },
+    "headline": "It&#x27;s the Data, Stupid!",
+    "url": "https://blog.shodan.io/its-the-data-stupid/",
+    "datePublished": "2015-07-18T21:51:42.692Z",
+    "dateModified": "2015-07-20T10:01:37.068Z",
+    "image": "http://blog.shodan.io/content/images/2015/07/Library-with-a-book-ladde-014.jpg",
+    "keywords": "research, MongoBD, NoSQL",
+    "description": "I would like to take a moment to discuss databases. Most people use Shodan to find devices that have web servers, but for a few years now I&#x27;ve also been crawling the Internet for various database software. I usually mention this during my talks and I&#x27;ve tried to raise awareness"
+}
+    </script>
+<meta name="generator" content="Ghost 0.7" />
+<link rel="alternate" type="application/rss+xml" title="Shodan Blog" href="https://blog.shodan.io/rss/" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-41147626-8', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body class="post-template tag-research tag-mongobd tag-nosql">
+<div class="quicknav">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://scanhub.shodan.io">Scanhub</a>
+</li>
+<li><a href="https://developer.shodan.io">Developers</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">View All...</a>
+</li>
+</ul>
+<div class="clear">
+</div>
+</div>
+<header class="main-header post-head " style="background-image: url(/content/images/2015/07/Library-with-a-book-ladde-014.jpg)">
+<nav class="main-nav overlay clearfix">
+<a class="back-button icon-arrow-left" href="http://blog.shodan.io">Home</a>
+<a class="subscribe-button icon-twitter" href="https://twitter.com/shodanhq">Twitter</a>
+<a class="subscribe-button icon-facebook" href="https://www.facebook.com/pages/Shodan/118600941553523">Facebook</a>
+<a class="subscribe-button icon-feed" href="http://blog.shodan.io/rss/">Subscribe</a>
+</nav>
+</header>
+<main class="content" role="main">
+<article class="post tag-research tag-mongobd tag-nosql">
+<header class="post-header">
+<h1 class="post-title">It&#x27;s the Data, Stupid!</h1>
+<section class="post-meta">
+<time class="post-date" datetime="2015-07-18">18 July 2015</time> on <a href="/tag/research/">research</a>, <a href="/tag/mongobd/">MongoBD</a>, <a href="/tag/nosql/">NoSQL</a>
+</section>
+</header>
+<section class="post-content">
+<p>I would like to take a moment to discuss databases. Most people use Shodan to find devices that have web servers, but for a few years now I've also been crawling the Internet for various database software. I usually mention this during my talks and I've tried to raise awareness of it over the years with mixed results. At least with <a href="https://www.shodan.io/search?query=product%3A%22MySQL%22">MySQL</a>, <a href="https://www.shodan.io/search?query=port%3A5432">PostgreSQL</a> and much of the relational database software the defaults are fairly secure: listen on the local interface only and provide some form of authorization by default. This isn't the case with some of the newer NoSQL products that started entering mainstream fairly recently. For the purpose of this article I will talk about one of the more popular NoSQL products called <a href="https://www.mongodb.com">MongoDB</a>, though much of what is being said also applies to other software (I'm looking at you <a href="https://www.shodan.io/search?query=product%3A%22Redis+key-value+store%22">Redis</a>).</p>
+<p><em>Note: This article isn't about the way MongoDB scales.</em></p>
+<p>Firstly, in an effort to make it a bit easier to understand the results for MongoDB I've updated the way they're <a href="https://www.shodan.io/search?query=product%3A%22MongoDB%22">represented in the search results</a>:</p>
+<p><img src="/content/images/2015/07/mongodb-results.png" alt="" /></p>
+<p>A quick <a href="https://www.shodan.io/report/OID7V1zw">search for MongoDB</a> reveals that there are nearly 30,000 instances on the Internet that don't have any authorization enabled. This was actually a bit surprising since by default MongoDB listens on localhost and has done so for a while based on the <a href="https://github.com/mongodb/mongo/blob/e01dfe96c73e89fb5e20f55faff4fcbfb54de1b5/debian/mongod.conf">oldest Github checkin for their mongodb.conf</a>. This made my results very confusing: how could there be so many open MongoDB installations if the defaults were to listen on localhost?</p>
+<h5 id="configurationhistory">Configuration History</h5>
+<p>So I started downloading older versions of MongoDB to figure out when they changed the configuration defaults. It turns out that <a href="https://fastdl.mongodb.org/src/mongodb-src-r2.4.14.tar.gz">MongoDB version 2.4.14</a> seems to be the last version that still listened to 0.0.0.0 by default, which looks like a maintenance release done on April 28, 2015. I'm a bit confused why a configuration file was checked-in to Github September 2013 that listened on localhost by default, but then they kept distributing versions that didn't include that change?! I dug around some more and eventually found the official issue in Jira that tracked this configuration issue:</p>
+<p><a href="https://jira.mongodb.org/browse/SERVER-4216">https://jira.mongodb.org/browse/SERVER-4216</a></p>
+<p>Roman Shtylman actually raised this problem back in February of 2012! It ended up taking a bit more than 2 years to change the settings. Based on the distribution of versions I'm seeing, my guess is that early versions of 2.6 might've also lacked binding to localhost:</p>
+<p><img src="/content/images/2015/07/mongodb-versions.png" alt="" /></p>
+<p>The lack of secure defaults explained some of the 30,000 results but just looking at the data made something else obvious.</p>
+<h5 id="thecloud">The Cloud</h5>
+<p><img src="/content/images/2015/07/mongodb-orgs.png" alt="" /></p>
+<p>The vast majority of public MongoDB instances are operating in a cloud: Digital Ocean, Amazon, Linode and OVH round out the most popular destinations for hosting MongoDB without authorization enabled. I've actually observed this trend across the board: cloud instances tend to be more vulnerable than the traditional datacenter hosting. My guess is that cloud images don't get updated as often, which translates into people deploying old and insecure versions of software.</p>
+<h5 id="problemscope">Problem Scope</h5>
+<p>There's a total of <strong>595.2 TB of data</strong> exposed on the Internet via publicly accessible MongoDB instances that don't have any form of authentication. To determine the scale of the problem I downloaded the data using the <a href="https://cli.shodan.io">Shodan command-line tool</a>:</p>
+<pre><code>shodan download --limit -1 mongodb "product:MongoDB"
+</code></pre>
+<p>And then I ran a small Python script to aggregate the total size of all exposed databases. I also looked at which database names were most popular:</p>
+<ol>
+<li><strong>local</strong>: 27,108 </li>
+<li><strong>admin</strong>: 22,286 </li>
+<li><strong>db</strong>: 9,895 </li>
+<li><strong>test</strong>: 6,818 </li>
+<li><strong>config</strong>: 1,119 </li>
+<li><strong>mydb</strong>: 498 </li>
+<li><strong>Video</strong>: 409 </li>
+<li><strong>hackedDB</strong>: 319 </li>
+<li><strong>storage</strong>: 315 </li>
+<li><strong>trash</strong>: 309</li>
+</ol>
+<p>Faceting on the database name reveals widespread installations that might've been misconfigured or otherwise exposed. There are a lot of instances that have some sort of administrative database, so the app that uses MongoDB probably has authentication but the database itself doesn't... The name that really sticks out is <strong>hackedDB</strong>. It's unclear whether those instances have been compromised or whether it's a large deployment of MongoDB servers from a company that uses "hackedDB" as its database name. Or maybe it's a honeypot? The interesting thing to note when <a href="https://www.shodan.io/search?query=product%3A%22MongoDB%22+hackeddb">looking at the results</a> is that 40% of the instances are running a very old version of MongoDB (1.8.1).</p>
+<p>I could go on and on about these sorts of problems because they're everywhere and haven't been resolved for years. Hopefully, more people will start looking at services that are responsible for the actual data and not solely focus on the web interfaces.</p>
+</section>
+<footer class="post-footer">
+<figure class="author-image">
+<a class="img" href="/author/john/" style="background-image: url(/content/images/2015/07/headshot.jpg)"><span class="hidden">John Matherly's Picture</span></a>
+</figure>
+<section class="author">
+<h4><a href="/author/john/">John Matherly</a></h4>
+<p>Read <a href="/author/john/">more posts</a> by this author.</p>
+<div class="author-meta">
+<span class="author-location icon-location">Austin, TX</span>
+<span class="author-link icon-link"><a href="https://www.shodan.io">https://www.shodan.io</a></span>
+</div>
+</section>
+<section class="share">
+<h4>Share this post</h4>
+<a class="icon-twitter" href="https://twitter.com/share?text=It's%20the%20Data%2C%20Stupid!&amp;url=https://blog.shodan.io/its-the-data-stupid/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class="hidden">Twitter</span>
+</a>
+<a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://blog.shodan.io/its-the-data-stupid/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class="hidden">Facebook</span>
+</a>
+<a class="icon-google-plus" href="https://plus.google.com/share?url=https://blog.shodan.io/its-the-data-stupid/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class="hidden">Google+</span>
+</a>
+</section>
+</footer>
+</article>
+</main>
+<footer class="site-footer clearfix">
+<section class="copyright"><a href="http://blog.shodan.io">Shodan Blog</a> &copy; 2022</section>
+</footer>
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/assets/js/jquery.fitvids.js?v=e6594bdeac"></script>
+<script type="text/javascript" src="/assets/js/index.js?v=e6594bdeac"></script>
+</body>
+</html>

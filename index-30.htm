@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	<title>MMCall > Users > Login</title>
+	
+	<!--Declare splash for mobile --> 
+	<meta name="apple-mobile-web-app-title" content="MMCall">
+	<link rel="apple-touch-icon-precomposed" href="/img/Splash/splash-icon.png"> 
+	
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0" />
+	<link href="/favicon.ico" type="image/x-icon" rel="icon" /><link href="/favicon.ico" type="image/x-icon" rel="shortcut icon" />	
+	<link rel="stylesheet" type="text/css" href="/css/style.css" />	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="/js/Bootstrap/html5shiv.min.js"></script>		<script type="text/javascript" src="/js/Bootstrap/respond.min.js"></script>	<![endif]-->
+	
+	<script type="text/javascript" src="/js/jQuery/jquery.js"></script>	</head>
+<body>
+	<div class="container">
+		
+<div id="login" class="row">
+
+	<div class="span12" style="text-align: center; margin-bottom: 30px;">
+		<img src="/img/logo.png" alt="MMCall" border="0" />
+	</div>
+
+	<div class="span4 offset4">
+		<div class="content-box">
+			<div class="content-box-header">
+				<i class="icon-lock"></i> Login				
+				<div class="btn-group pull-right">
+					<a class="widget inline" href="#" data-toggle="modal" data-target="#forgotModal">
+						<i class="icon-question"></i>
+					</a>
+				</div>
+			</div>
+			
+			<div id="forgotModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&#215;</button>
+					<h3>Forgot your password?</h3>
+				</div>
+				<div class="modal-body">
+					<p>Contact your system administrator to reset you password. Once your password has been reset you will be able to access the application using your email and the default password 123456.</p>
+				</div>
+			</div>
+			
+			<div class="content">
+								
+				<form action="/" novalidate="novalidate" id="UserLoginForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>					<div class="input-prepend input-block-level">
+						<span class="add-on"><i class="icon-envelope"></i></span>
+						<input id="UserEmail" name="data[User][email]" type="text" placeholder="Email" maxlength="255" />
+					</div>
+					
+					<div class="input-prepend input-block-level">
+						<span class="add-on"><i class="icon-key"></i></span>
+						<input id="UserPassword" name="data[User][password]" type="password" placeholder="Password" />
+					</div>
+					
+					<hr/>
+					
+					<input  class="btn btn-large btn-block btn-primary" type="submit" value="Login" />
+				</form>			</div>
+		</div>
+	</div>
+</div>	</div>
+	
+	<script type="text/javascript" src="/js/libs.js"></script>	<script type="text/javascript" src="/js/custom.js"></script></body>
+</html>

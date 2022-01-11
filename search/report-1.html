@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Search Engine</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@shodanhq" />
+<meta name="twitter:creator" content="@achillean" />
+<meta name="twitter:title" content="Shodan Search" />
+<meta name="twitter:image" content="https://www.shodan.io/search/report.png?query=linux+upnp+avtech" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shodan Search" />
+<meta property="og:image" content="https://www.shodan.io/search/report.png?query=linux+upnp+avtech" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta name="twitter:description" content="197,020 results found for search query: linux upnp avtech" />
+<meta property="og:description" content="197,020 results found for search query: linux upnp avtech" />
+<link rel="stylesheet" href="/static/jquery/jquery-jvectormap-1.2.2.css" />
+<style>#worldmap {
+    height: 300px;
+}
+.jvectormap-zoomout,
+.jvectormap-zoomin {
+    display: none;
+}
+
+.card ul {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." value="linux upnp avtech" autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br /><br />
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h5 class="heading-highlight u-pull-right"><span>Total: 197,020</span>
+</h5>
+<h3 style="display:inline-block; margin-right: 20px" class="heading-highlight"><span>Shodan Report</span>
+</h3><code>linux upnp avtech</code>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>General</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="eight columns card card-padding card-red">
+<div id="worldmap"></div>
+</div>
+<div class="four columns card card-padding card-red">
+<h1><i class="far fa-globe  fa-fw "></i><em>Countries</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+country%3A%22MY%22" class="text-dark"><strong>Malaysia</strong></a><span class="u-pull-right">41,941</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+country%3A%22TH%22" class="text-dark"><strong>Thailand</strong></a><span class="u-pull-right">32,513</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+country%3A%22TW%22" class="text-dark"><strong>Taiwan</strong></a><span class="u-pull-right">13,264</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+country%3A%22ID%22" class="text-dark"><strong>Indonesia</strong></a><span class="u-pull-right">13,128</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+country%3A%22SA%22" class="text-dark"><strong>Saudi Arabia</strong></a><span class="u-pull-right">10,552</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-blue">
+<h1><i class="far fa-sitemap  fa-fw "></i><em>Ports</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+port%3A%2280%22" class="text-dark"><strong>80</strong></a><span class="u-pull-right">18,218</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+port%3A%2288%22" class="text-dark"><strong>88</strong></a><span class="u-pull-right">4,974</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+port%3A%228080%22" class="text-dark"><strong>8080</strong></a><span class="u-pull-right">3,824</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+port%3A%2281%22" class="text-dark"><strong>81</strong></a><span class="u-pull-right">3,576</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+port%3A%228000%22" class="text-dark"><strong>8000</strong></a><span class="u-pull-right">2,635</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=port" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-purple">
+<h1><i class="far fa-building  fa-fw "></i><em>Organization</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22TMNST%22" class="text-dark"><strong>TMNST</strong></a><span class="u-pull-right">20,209</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Maxis+Broadband+Sdn+Bhd%22" class="text-dark"><strong>Maxis Broadband Sdn Bhd</strong></a><span class="u-pull-right">12,294</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Triple+T+Broadband+Public+Company+Limited%22" class="text-dark"><strong>Triple T Broadband Public Company Lim...</strong></a><span class="u-pull-right">11,483</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Saudi+Telecom+Company+JSC%22" class="text-dark"><strong>Saudi Telecom Company JSC</strong></a><span class="u-pull-right">10,550</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+org%3A%22Chunghwa+Telecom+Co.%2CLtd.%22" class="text-dark"><strong>Chunghwa Telecom Co.,Ltd.</strong></a><span class="u-pull-right">9,884</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=org" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-orange">
+<h1><i class="far fa-exclamation-triangle  fa-fw "></i><em>Vulnerabilities</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+vuln%3A%22cve-2013-1391%22" class="text-dark"><strong>CVE-2013-1391</strong></a><span class="u-pull-right">3</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-purple">
+<h1><i class="far fa-store  fa-fw "></i><em>Products</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+product%3A%22Avtech+AVN801+network+camera%22" class="text-dark"><strong>Avtech AVN801 network camera</strong></a><span class="u-pull-right">55,822</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+product%3A%22lighttpd%22" class="text-dark"><strong>lighttpd</strong></a><span class="u-pull-right">36</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+product%3A%22Apache+httpd%22" class="text-dark"><strong>Apache httpd</strong></a><span class="u-pull-right">29</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+product%3A%22HttpFileServer+httpd%22" class="text-dark"><strong>HttpFileServer httpd</strong></a><span class="u-pull-right">18</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+product%3A%22Teradici+PCoIP+Management+Console%22" class="text-dark"><strong>Teradici PCoIP Management Console</strong></a><span class="u-pull-right">17</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=product" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-red">
+<h1><i class="far fa-tags  fa-fw "></i><em>Tags</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+tag%3A%22honeypot%22" class="text-dark"><strong>honeypot</strong></a><span class="u-pull-right">17,475</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+tag%3A%22cloud%22" class="text-dark"><strong>cloud</strong></a><span class="u-pull-right">8,926</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+tag%3A%22self-signed%22" class="text-dark"><strong>self-signed</strong></a><span class="u-pull-right">1,227</span>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-green">
+<h1><i class="far fa-microchip  fa-fw "></i><em>Operating Systems</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+os%3A%22Synology%22" class="text-dark"><strong>Synology</strong></a><span class="u-pull-right">21</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+os%3A%22MikroTik+RouterOS+6.27%22" class="text-dark"><strong>MikroTik RouterOS 6.27</strong></a><span class="u-pull-right">17</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>HTTP Insights</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-lighter-blue">
+<h1><em>Website Titles</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+http.title%3A%22%3A%3A%3A+Login+%3A%3A%3A%22" class="text-dark"><strong>::: Login :::</strong></a><span class="u-pull-right">130,786</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.title%3A%22Remote+Surveillance%2C+Any+time+%26amp%3B+Any+where%22" class="text-dark"><strong>Remote Surveillance, Any time &amp;amp; A...</strong></a><span class="u-pull-right">24,619</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.title%3A%22BIG-IP%C2%AE-+Redirect%22" class="text-dark"><strong>BIG-IP®- Redirect</strong></a><span class="u-pull-right">5,011</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.title%3A%22404+Not+Found%22" class="text-dark"><strong>404 Not Found</strong></a><span class="u-pull-right">572</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.title%3A%22H.264+DVR%22" class="text-dark"><strong>H.264 DVR</strong></a><span class="u-pull-right">350</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=http.title" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-blue">
+<h1><em>Web Technologies</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+http.component%3A%22AngularJS%22" class="text-dark"><strong>AngularJS</strong></a><span class="u-pull-right">15,518</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.component%3A%22Ruby%22" class="text-dark"><strong>Ruby</strong></a><span class="u-pull-right">8,444</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.component%3A%22Ruby+on+Rails%22" class="text-dark"><strong>Ruby on Rails</strong></a><span class="u-pull-right">8,444</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.component%3A%22Java%22" class="text-dark"><strong>Java</strong></a><span class="u-pull-right">1,811</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+http.component%3A%22SonarQubes%22" class="text-dark"><strong>SonarQubes</strong></a><span class="u-pull-right">1,811</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=http.component" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-blue">
+<h1><em>Protocol Versions</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+ssl.alpn%3A%22http%2F1.1%22" class="text-dark"><strong>http/1.1</strong></a><span class="u-pull-right">22</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>SSL Insights</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-yellow">
+<h1><em>SSL/ TLS Versions</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+ssl.version%3A%22tlsv1%22" class="text-dark"><strong>tlsv1</strong></a><span class="u-pull-right">1,396</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.version%3A%22tlsv1.2%22" class="text-dark"><strong>tlsv1.2</strong></a><span class="u-pull-right">1,326</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.version%3A%22tlsv1.1%22" class="text-dark"><strong>tlsv1.1</strong></a><span class="u-pull-right">1,322</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.version%3A%22tlsv1.3%22" class="text-dark"><strong>tlsv1.3</strong></a><span class="u-pull-right">174</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.version%3A%22sslv3%22" class="text-dark"><strong>sslv3</strong></a><span class="u-pull-right">81</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=ssl.version" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-orange">
+<h1><em>JARM Fingerprints</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+ssl.jarm%3A%2220d08b20d21d20d20c42d08b20b41d1ec49a4b64df0a9e9f328abd60285841%22" class="text-dark"><strong>20d08b20d21d20d20c42d08b20b41d1ec49a4...</strong></a><span class="u-pull-right">711</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.jarm%3A%222ad2ad0002ad2ad22c42d42d000000faabb8fd156aa8b4d8a37853e1063261%22" class="text-dark"><strong>2ad2ad0002ad2ad22c42d42d000000faabb8f...</strong></a><span class="u-pull-right">265</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.jarm%3A%223fd21b20d00000021c43d21b21b43d41226dd5dfc615dd4a96265559485910%22" class="text-dark"><strong>3fd21b20d00000021c43d21b21b43d41226dd...</strong></a><span class="u-pull-right">206</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.jarm%3A%2220d08b20d21d20d20c42d08b20b41d0f659f50adfbb49920b021a0232ca196%22" class="text-dark"><strong>20d08b20d21d20d20c42d08b20b41d0f659f5...</strong></a><span class="u-pull-right">89</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.jarm%3A%2204b10b00004b04b04b04b10b04b04b9674c6b4e623ae36cc2d998e99e2262e%22" class="text-dark"><strong>04b10b00004b04b04b04b10b04b04b9674c6b...</strong></a><span class="u-pull-right">67</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=ssl.jarm" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-red">
+<h1><em>JA3S Fingerprints</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=linux+upnp+avtech+ssl.ja3s%3A%22853a40879f82a9da4ed2e19c590c05ea%22" class="text-dark"><strong>853a40879f82a9da4ed2e19c590c05ea</strong></a><span class="u-pull-right">799</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.ja3s%3A%22e35df3e00ca4ef31d42b34bebaa2f86e%22" class="text-dark"><strong>e35df3e00ca4ef31d42b34bebaa2f86e</strong></a><span class="u-pull-right">278</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.ja3s%3A%228ed408107f89c53261bf74e58517bc76%22" class="text-dark"><strong>8ed408107f89c53261bf74e58517bc76</strong></a><span class="u-pull-right">203</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.ja3s%3A%227770094a92b1cbfa5a6de2017cfb682a%22" class="text-dark"><strong>7770094a92b1cbfa5a6de2017cfb682a</strong></a><span class="u-pull-right">76</span>
+</li>
+<li><a href="/search?query=linux+upnp+avtech+ssl.ja3s%3A%22714ac86d50db68420429ca897688f5f3%22" class="text-dark"><strong>714ac86d50db68420429ca897688f5f3</strong></a><span class="u-pull-right">75</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=linux+upnp+avtech&amp;facet=ssl.ja3s" class="button">More...</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+ </li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script src="/static/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-world-mill-en.js"></script>
+<script>(function() {
+    function initWorldMap() {
+        $worldmap = $('#worldmap')
+        if (!$worldmap.length) {
+            return;
+        }
+
+        let worldmapdata = {"MY": 41941, "TH": 32513, "TW": 13264, "ID": 13128, "SA": 10552, "VN": 9039, "MX": 8892, "LK": 8533, "SG": 7981, "BN": 7682, "CN": 7390, "US": 5754, "MU": 2341, "JP": 1951, "CH": 1939, "DE": 1842, "SE": 1481, "HK": 1410, "CA": 1226, "TR": 1174, "RU": 1173, "IT": 1140, "FR": 1109, "GB": 1078, "AR": 1035, "BD": 973, "CZ": 746, "IN": 724, "NL": 715, "BR": 704, "MA": 663, "IR": 602, "RO": 573, "AU": 571, "ZA": 442, "GH": 438, "PT": 413, "JO": 363, "DO": 345, "GR": 300, "PH": 246, "DZ": 201, "KH": 185, "BE": 183, "NO": 164, "LB": 139, "ES": 122, "AT": 115, "NZ": 112, "MO": 102, "PA": 102, "VE": 86, "HU": 81, "TN": 79, "PL": 76, "EG": 73, "BH": 58, "KR": 46, "IE": 43, "KW": 41, "IL": 38, "DK": 35, "PK": 32, "SK": 32, "UA": 31, "MK": 29, "LT": 26, "AE": 24, "SY": 22, "CI": 21, "CO": 20, "MT": 20, "KZ": 19, "PE": 17, "BY": 16, "HR": 15, "MV": 15, "UY": 14, "CL": 12, "EC": 12, "HN": 12, "GT": 8, "PY": 8, "BG": 7, "FI": 7, "NG": 7, "AM": 6, "GU": 6, "PR": 6, "AZ": 5, "BA": 5, "MD": 5, "NC": 5, "RS": 5, "CV": 4, "GQ": 4, "LA": 4, "LV": 4, "LY": 4, "PS": 4};
+        $worldmap.empty();
+        $worldmap.vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            zoomOnScroll: false,
+            regionStyle: {
+                initial: {
+                    'stroke': '#404040',
+                    'stroke-width': 0.5,
+                    'stroke-opacity': 1,
+                },
+            },
+            series: {
+                regions: [{
+                    values: worldmapdata,
+                    scale: ['#FFDBDB', '#C60F13'],
+                    normalizeFunction: 'polynomial',
+                }],
+            },
+            onRegionLabelShow: function(event, label, code) {
+                let count = worldmapdata[code] || 0;
+                label.html(
+                    '<b>' + label.text() + '</b><br/>' +
+                    'Hosts: ' + count.toLocaleString(),
+                );
+            }
+        });
+    }
+
+    setTimeout(initWorldMap, 500);
+})()
+</script>
+</body>
+</html>

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Search Engine</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@shodanhq" />
+<meta name="twitter:creator" content="@achillean" />
+<meta name="twitter:title" content="Shodan Search" />
+<meta name="twitter:image" content="https://www.shodan.io/search/report.png?query=webcam" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shodan Search" />
+<meta property="og:image" content="https://www.shodan.io/search/report.png?query=webcam" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta name="twitter:description" content="9,497 results found for search query: webcam" />
+<meta property="og:description" content="9,497 results found for search query: webcam" />
+<link rel="stylesheet" href="/static/jquery/jquery-jvectormap-1.2.2.css" />
+<style>#worldmap {
+    height: 300px;
+}
+.jvectormap-zoomout,
+.jvectormap-zoomin {
+    display: none;
+}
+
+.card ul {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." value="webcam" autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br /><br />
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h5 class="heading-highlight u-pull-right"><span>Total: 9,497</span>
+</h5>
+<h3 style="display:inline-block; margin-right: 20px" class="heading-highlight"><span>Shodan Report</span>
+</h3><code>webcam</code>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>General</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="eight columns card card-padding card-red">
+<div id="worldmap"></div>
+</div>
+<div class="four columns card card-padding card-red">
+<h1><i class="far fa-globe  fa-fw "></i><em>Countries</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+country%3A%22CN%22" class="text-dark"><strong>China</strong></a><span class="u-pull-right">2,942</span>
+</li>
+<li><a href="/search?query=webcam+country%3A%22CH%22" class="text-dark"><strong>Switzerland</strong></a><span class="u-pull-right">1,901</span>
+</li>
+<li><a href="/search?query=webcam+country%3A%22US%22" class="text-dark"><strong>United States</strong></a><span class="u-pull-right">1,719</span>
+</li>
+<li><a href="/search?query=webcam+country%3A%22IN%22" class="text-dark"><strong>India</strong></a><span class="u-pull-right">437</span>
+</li>
+<li><a href="/search?query=webcam+country%3A%22SG%22" class="text-dark"><strong>Singapore</strong></a><span class="u-pull-right">408</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-blue">
+<h1><i class="far fa-sitemap  fa-fw "></i><em>Ports</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+port%3A%228080%22" class="text-dark"><strong>8080</strong></a><span class="u-pull-right">527</span>
+</li>
+<li><a href="/search?query=webcam+port%3A%228081%22" class="text-dark"><strong>8081</strong></a><span class="u-pull-right">504</span>
+</li>
+<li><a href="/search?query=webcam+port%3A%22443%22" class="text-dark"><strong>443</strong></a><span class="u-pull-right">336</span>
+</li>
+<li><a href="/search?query=webcam+port%3A%2280%22" class="text-dark"><strong>80</strong></a><span class="u-pull-right">255</span>
+</li>
+<li><a href="/search?query=webcam+port%3A%229000%22" class="text-dark"><strong>9000</strong></a><span class="u-pull-right">194</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=port" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-purple">
+<h1><i class="far fa-building  fa-fw "></i><em>Organization</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+org%3A%22Swisscom+%28Schweiz%29+AG%22" class="text-dark"><strong>Swisscom (Schweiz) AG</strong></a><span class="u-pull-right">1,877</span>
+</li>
+<li><a href="/search?query=webcam+org%3A%22Asia+Pacific+Network+Information+Center%2C+Pty.+Ltd.%22" class="text-dark"><strong>Asia Pacific Network Information Cent...</strong></a><span class="u-pull-right">1,218</span>
+</li>
+<li><a href="/search?query=webcam+org%3A%22Tencent+cloud+computing+%28Beijing%29+Co.%2C+Ltd.%22" class="text-dark"><strong>Tencent cloud computing (Beijing) Co....</strong></a><span class="u-pull-right">862</span>
+</li>
+<li><a href="/search?query=webcam+org%3A%22Shanghai+UCloud+Information+Technology+Company+Limited%22" class="text-dark"><strong>Shanghai UCloud Information Technolog...</strong></a><span class="u-pull-right">847</span>
+</li>
+<li><a href="/search?query=webcam+org%3A%22Tencent+Cloud+Computing+%28Beijing%29+Co.%2C+Ltd%22" class="text-dark"><strong>Tencent Cloud Computing (Beijing) Co....</strong></a><span class="u-pull-right">719</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=org" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-orange">
+<h1><i class="far fa-exclamation-triangle  fa-fw "></i><em>Vulnerabilities</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+vuln%3A%22cve-2020-0796%22" class="text-dark"><strong>SMBv3 Remote Code Execution</strong></a><span class="u-pull-right">1</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-purple">
+<h1><i class="far fa-store  fa-fw "></i><em>Products</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+product%3A%22Yawcam+webcam+viewer+httpd%22" class="text-dark"><strong>Yawcam webcam viewer httpd</strong></a><span class="u-pull-right">219</span>
+</li>
+<li><a href="/search?query=webcam+product%3A%22Apache+httpd%22" class="text-dark"><strong>Apache httpd</strong></a><span class="u-pull-right">168</span>
+</li>
+<li><a href="/search?query=webcam+product%3A%22webcam+7+httpd%22" class="text-dark"><strong>webcam 7 httpd</strong></a><span class="u-pull-right">108</span>
+</li>
+<li><a href="/search?query=webcam+product%3A%22Netwave+IP+camera+http+config%22" class="text-dark"><strong>Netwave IP camera http config</strong></a><span class="u-pull-right">38</span>
+</li>
+<li><a href="/search?query=webcam+product%3A%22Sendmail%22" class="text-dark"><strong>Sendmail</strong></a><span class="u-pull-right">37</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=product" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-red">
+<h1><i class="far fa-tags  fa-fw "></i><em>Tags</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+tag%3A%22honeypot%22" class="text-dark"><strong>honeypot</strong></a><span class="u-pull-right">7,406</span>
+</li>
+<li><a href="/search?query=webcam+tag%3A%22cloud%22" class="text-dark"><strong>cloud</strong></a><span class="u-pull-right">2,034</span>
+</li>
+<li><a href="/search?query=webcam+tag%3A%22self-signed%22" class="text-dark"><strong>self-signed</strong></a><span class="u-pull-right">479</span>
+</li>
+<li><a href="/search?query=webcam+tag%3A%22starttls%22" class="text-dark"><strong>starttls</strong></a><span class="u-pull-right">40</span>
+</li>
+<li><a href="/search?query=webcam+tag%3A%22iot%22" class="text-dark"><strong>iot</strong></a><span class="u-pull-right">3</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=tag" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-green">
+<h1><i class="far fa-microchip  fa-fw "></i><em>Operating Systems</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+os%3A%22Synology+DiskStation+Manager+%28DSM%29+6.2.4-25556%22" class="text-dark"><strong>Synology DiskStation Manager (DSM) 6....</strong></a><span class="u-pull-right">7</span>
+</li>
+<li><a href="/search?query=webcam+os%3A%22QTS%22" class="text-dark"><strong>QTS</strong></a><span class="u-pull-right">5</span>
+</li>
+<li><a href="/search?query=webcam+os%3A%22Windows+6.1%22" class="text-dark"><strong>Windows 6.1</strong></a><span class="u-pull-right">4</span>
+</li>
+<li><a href="/search?query=webcam+os%3A%22Unix%22" class="text-dark"><strong>Unix</strong></a><span class="u-pull-right">3</span>
+</li>
+<li><a href="/search?query=webcam+os%3A%22MikroTik+RouterOS+6.48.6%22" class="text-dark"><strong>MikroTik RouterOS 6.48.6</strong></a><span class="u-pull-right">2</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=os" class="button">More...</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>HTTP Insights</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-lighter-blue">
+<h1><em>Website Titles</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+http.title%3A%22BIG-IP%C2%AE-+Redirect%22" class="text-dark"><strong>BIG-IP®- Redirect</strong></a><span class="u-pull-right">5,012</span>
+</li>
+<li><a href="/search?query=webcam+http.title%3A%2228ZE%22" class="text-dark"><strong>28ZE</strong></a><span class="u-pull-right">260</span>
+</li>
+<li><a href="/search?query=webcam+http.title%3A%22webcam+7%22" class="text-dark"><strong>webcam 7</strong></a><span class="u-pull-right">143</span>
+</li>
+<li><a href="/search?query=webcam+http.title%3A%22IP+Webcam%22" class="text-dark"><strong>IP Webcam</strong></a><span class="u-pull-right">136</span>
+</li>
+<li><a href="/search?query=webcam+http.title%3A%22Checking+Language...%22" class="text-dark"><strong>Checking Language...</strong></a><span class="u-pull-right">17</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=http.title" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-blue">
+<h1><em>Web Technologies</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+http.component%3A%22AngularJS%22" class="text-dark"><strong>AngularJS</strong></a><span class="u-pull-right">6,582</span>
+</li>
+<li><a href="/search?query=webcam+http.component%3A%22jQuery%22" class="text-dark"><strong>jQuery</strong></a><span class="u-pull-right">147</span>
+</li>
+<li><a href="/search?query=webcam+http.component%3A%22Bootstrap%22" class="text-dark"><strong>Bootstrap</strong></a><span class="u-pull-right">140</span>
+</li>
+<li><a href="/search?query=webcam+http.component%3A%22SWFObject%22" class="text-dark"><strong>SWFObject</strong></a><span class="u-pull-right">139</span>
+</li>
+<li><a href="/search?query=webcam+http.component%3A%22Google+Font+API%22" class="text-dark"><strong>Google Font API</strong></a><span class="u-pull-right">124</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=http.component" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-blue">
+<h1><em>Protocol Versions</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+ssl.alpn%3A%22http%2F1.1%22" class="text-dark"><strong>http/1.1</strong></a><span class="u-pull-right">15</span>
+</li>
+<li><a href="/search?query=webcam+ssl.alpn%3A%22h2%22" class="text-dark"><strong>h2</strong></a><span class="u-pull-right">5</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>SSL Insights</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-yellow">
+<h1><em>SSL/ TLS Versions</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+ssl.version%3A%22tlsv1.2%22" class="text-dark"><strong>tlsv1.2</strong></a><span class="u-pull-right">784</span>
+</li>
+<li><a href="/search?query=webcam+ssl.version%3A%22tlsv1%22" class="text-dark"><strong>tlsv1</strong></a><span class="u-pull-right">776</span>
+</li>
+<li><a href="/search?query=webcam+ssl.version%3A%22tlsv1.1%22" class="text-dark"><strong>tlsv1.1</strong></a><span class="u-pull-right">776</span>
+</li>
+<li><a href="/search?query=webcam+ssl.version%3A%22tlsv1.3%22" class="text-dark"><strong>tlsv1.3</strong></a><span class="u-pull-right">159</span>
+</li>
+<li><a href="/search?query=webcam+ssl.version%3A%22sslv3%22" class="text-dark"><strong>sslv3</strong></a><span class="u-pull-right">62</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=ssl.version" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-orange">
+<h1><em>JARM Fingerprints</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+ssl.jarm%3A%222ad2ad0002ad2ad22c42d42d000000faabb8fd156aa8b4d8a37853e1063261%22" class="text-dark"><strong>2ad2ad0002ad2ad22c42d42d000000faabb8f...</strong></a><span class="u-pull-right">260</span>
+</li>
+<li><a href="/search?query=webcam+ssl.jarm%3A%223fd21b20d00000021c43d21b21b43d41226dd5dfc615dd4a96265559485910%22" class="text-dark"><strong>3fd21b20d00000021c43d21b21b43d41226dd...</strong></a><span class="u-pull-right">206</span>
+</li>
+<li><a href="/search?query=webcam+ssl.jarm%3A%2221d14d00021d21d21c42d43d0000007abc6200da92c2a1b69c0a56366cbe21%22" class="text-dark"><strong>21d14d00021d21d21c42d43d0000007abc620...</strong></a><span class="u-pull-right">127</span>
+</li>
+<li><a href="/search?query=webcam+ssl.jarm%3A%2220d08b20d21d20d20c42d08b20b41d0f659f50adfbb49920b021a0232ca196%22" class="text-dark"><strong>20d08b20d21d20d20c42d08b20b41d0f659f5...</strong></a><span class="u-pull-right">89</span>
+</li>
+<li><a href="/search?query=webcam+ssl.jarm%3A%2200000000000000000000000000000000000000000000000000000000000000%22" class="text-dark"><strong>0000000000000000000000000000000000000...</strong></a><span class="u-pull-right">56</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=ssl.jarm" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-red">
+<h1><em>JA3S Fingerprints</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=webcam+ssl.ja3s%3A%22e35df3e00ca4ef31d42b34bebaa2f86e%22" class="text-dark"><strong>e35df3e00ca4ef31d42b34bebaa2f86e</strong></a><span class="u-pull-right">395</span>
+</li>
+<li><a href="/search?query=webcam+ssl.ja3s%3A%228ed408107f89c53261bf74e58517bc76%22" class="text-dark"><strong>8ed408107f89c53261bf74e58517bc76</strong></a><span class="u-pull-right">203</span>
+</li>
+<li><a href="/search?query=webcam+ssl.ja3s%3A%22853a40879f82a9da4ed2e19c590c05ea%22" class="text-dark"><strong>853a40879f82a9da4ed2e19c590c05ea</strong></a><span class="u-pull-right">85</span>
+</li>
+<li><a href="/search?query=webcam+ssl.ja3s%3A%22f6e234011390444c303f74d09d87322d%22" class="text-dark"><strong>f6e234011390444c303f74d09d87322d</strong></a><span class="u-pull-right">46</span>
+</li>
+<li><a href="/search?query=webcam+ssl.ja3s%3A%224b505adfb4a921c5a3a39d293b0811e1%22" class="text-dark"><strong>4b505adfb4a921c5a3a39d293b0811e1</strong></a><span class="u-pull-right">26</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=webcam&amp;facet=ssl.ja3s" class="button">More...</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script src="/static/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-world-mill-en.js"></script>
+<script>(function() {
+    function initWorldMap() {
+        $worldmap = $('#worldmap')
+        if (!$worldmap.length) {
+            return;
+        }
+
+        let worldmapdata = {"CN": 2942, "CH": 1901, "US": 1719, "IN": 437, "SG": 408, "KR": 319, "JP": 305, "DE": 226, "RU": 161, "GB": 115, "IT": 109, "FR": 91, "CA": 69, "NL": 61, "ID": 55, "PL": 45, "AU": 42, "ES": 38, "HU": 35, "TW": 33, "RO": 31, "AT": 30, "AR": 26, "UA": 20, "SE": 19, "CZ": 18, "BR": 17, "RS": 15, "MY": 13, "PT": 13, "BG": 12, "MX": 12, "ZA": 12, "FI": 11, "TR": 11, "UY": 10, "CO": 9, "SI": 9, "GR": 6, "HK": 6, "BE": 5, "CL": 5, "DK": 5, "LV": 5, "NO": 5, "SK": 5, "BY": 4, "EE": 4, "HR": 4, "IR": 4, "NZ": 4, "EG": 3, "MA": 3, "AM": 2, "BD": 2, "CY": 2, "GF": 2, "IE": 2, "IL": 2, "LT": 2, "MT": 2, "AW": 1, "AZ": 1, "DM": 1, "IM": 1, "MD": 1, "MK": 1, "MO": 1, "MV": 1, "PR": 1, "RE": 1, "TH": 1, "TN": 1, "VE": 1, "VN": 1};
+        $worldmap.empty();
+        $worldmap.vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            zoomOnScroll: false,
+            regionStyle: {
+                initial: {
+                    'stroke': '#404040',
+                    'stroke-width': 0.5,
+                    'stroke-opacity': 1,
+                },
+            },
+            series: {
+                regions: [{
+                    values: worldmapdata,
+                    scale: ['#FFDBDB', '#C60F13'],
+                    normalizeFunction: 'polynomial',
+                }],
+            },
+            onRegionLabelShow: function(event, label, code) {
+                let count = worldmapdata[code] || 0;
+                label.html(
+                    '<b>' + label.text() + '</b><br/>' +
+                    'Hosts: ' + count.toLocaleString(),
+                );
+            }
+        });
+    }
+
+    setTimeout(initWorldMap, 500);
+})()
+</script>
+</body>
+</html>

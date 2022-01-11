@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Network Infrastructure - Explore</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<style>.searchbox input {
+    width: 100%
+}
+
+.browse-queries {
+    padding: 18px;
+}
+
+.browse-queries .wrapper {
+    display: flex;
+}
+
+.browse-queries .content {
+    width: 100%;
+}
+
+.browse-queries h1 {
+    margin-bottom: 0px;
+    font-weight: 700;
+}
+
+.browse-queries a p {
+    margin-bottom: 0px;
+}
+
+.browse-queries h1, .browse-queries a p {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.browse-queries .bottom {
+    margin-top: 11px;
+}
+
+.browse-queries .bottom .vote {
+    font-weight: 700;
+}
+
+.browse-categories .card {
+    margin-bottom: 3rem;
+}
+
+.browse-categories a {
+    height: 125px;
+    display: block;
+    position: relative;
+}
+
+.browse-categories a img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.browse-categories a span {
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#tags a {
+    margin-bottom: 5px;
+}
+</style>
+<style>#category-banner {
+    background: url(/static/img/categories/network-infrastructure/network-infrastructure.jpg) no-repeat center;
+    background-size: 100% auto;
+    height: 200px;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div id="category-banner" class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+</div>
+</div>
+</div>
+<div class="container category"><br />
+<div class="row">
+<div class="twelve columns">
+<h3 class="heading-highlight"><span>Network Infrastructure</span>
+</h3>
+</div>
+</div>
+<div class="row">
+<div class="eight columns">
+<h6 class="grid-heading"><span>Technologies</span>
+</h6>
+<div class="card card-padding">
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/weavescope.png" alt="Weave Scope" />
+<p>Weave Scope is a visualization and monitoring tool for Docker and Kubernetes. It provides a top down view into your app as well as your entire infrastructure, and allows you to diagnose any problems with your distributed containerized app.</p><a href="/search?query=title%3A%22Weave%2BScope%22+http.favicon.hash%3A567176827" class="button">Explore Weave Scope</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/bomgar.png" alt="Bomgar Help Desk" />
+<p>BeyondTrust’s integrations allow you to launch a remote support session directly from the ticket or record, automatically update tickets with details from the support session and include the chat transcript and session recording in the ticket.</p><a href="/search?query=%22Server%3A+Bomgar%22+%22200+OK%22" class="button">Explore Bomgar Help Desk</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/citrix.png" alt="Citrix" />
+<p>Citrix Virtual Apps is application virtualization software produced by Citrix Systems that allows Windows applications to be accessed via individual devices from a shared server or cloud system.</p><a href="/search?query=%22Citrix+Applications%3A%22+port%3A1604" class="button">Explore Citrix</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/pihole.png" alt="Pi-hole" />
+<p>Pi-hole is a Linux network-level advertisement and Internet tracker blocking application which acts as a DNS sinkhole and optionally a DHCP server, intended for use on a private network.</p><a href="/search?query=%22dnsmasq-pi-hole%22+%22Recursion%3A+enabled%22" class="button">Explore Pi-hole</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/polycom.png" alt="Polycom" />
+<p>Polycom&#39;s video conferencing system provides companies of all sizes with flexible deployments for mobile devices, desktop computers and meeting rooms.</p><a href="/search?query=http.title%3A%22-+Polycom%22+%22Server%3A+lighttpd%22" class="button">Explore Polycom</a>
+</div>
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/pbx-ip.jpg" alt="PBX IP" />
+<p>A network device that converts voice and fax calls, in real time, between the public switched telephone network (PSTN) and an IP network.</p><a href="/search?query=PBX+%22gateway+console%22+-password+port%3A23" class="button">Explore PBX IP</a>
+</div>
+</div>
+<hr />
+<div class="row">
+<div class="six columns"><img src="/static/img/categories/network-infrastructure/intel.png" alt="Intel AMT" />
+<p>Intel Active Management Technology is hardware and firmware for remote out-of-band management of select business computers, running on the Intel Management Engine.</p><a href="/search?query=%22Intel+Active+Management+Technology%22+port%3A623%2C664%2C16992%2C16993%2C16994%2C16995" class="button">Explore Intel AMT</a>
+</div>
+</div>
+</div>
+</div>
+<div class="four columns">
+<h6 class="grid-heading"><span>Further Reading</span>
+</h6>
+<div class="card card-padding card-yellow">
+<h1><em>Awesome</em>Shodan queries
+</h1>
+<p>A collection of interesting and often surprising search queries to plug into Shodan. Explore the world of network devices using this curated list of queries:</p><a href="https://github.com/jakejarvis/awesome-shodan-queries" target="_blank" rel="noopener noreferrer nofollow" class="button">Get Started</a>
+</div>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+ </li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

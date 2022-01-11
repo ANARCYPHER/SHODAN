@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Shodan Search Engine</title>
+<meta charset="utf-8">
+<meta name="description" content="Search Engine for the Internet of Things">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://wire.shodan.io/v2.4.0/default/css/wire.css" rel="stylesheet" />
+<link rel="shortcut icon" href="/static/img/favicon.png" type="image/x-icon">
+<link rel="apple-touch-icon" href="/static/img/apple-touch-icon-192.png">
+<link rel="search" href="/static/opensearch.xml" type="application/opensearchdescription+xml" title="Shodan">
+<script defer src="https://kit.fontawesome.com/b7e79643d9.js" crossorigin="anonymous"></script>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@shodanhq" />
+<meta name="twitter:creator" content="@achillean" />
+<meta name="twitter:title" content="Shodan Search" />
+<meta name="twitter:image" content="https://www.shodan.io/search/report.png?query=%22default+password%22" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Shodan Search" />
+<meta property="og:image" content="https://www.shodan.io/search/report.png?query=%22default+password%22" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="600" />
+<meta name="twitter:description" content="778 results found for search query: &#34;default password&#34;" />
+<meta property="og:description" content="778 results found for search query: &#34;default password&#34;" />
+<link rel="stylesheet" href="/static/jquery/jquery-jvectormap-1.2.2.css" />
+<style>#worldmap {
+    height: 300px;
+}
+.jvectormap-zoomout,
+.jvectormap-zoomin {
+    display: none;
+}
+
+.card ul {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+</style>
+</head>
+<body>
+<div class="quickbar">
+<ul>
+<li><a href="https://www.shodan.io">Shodan</a>
+</li>
+<li><a href="https://maps.shodan.io">Maps</a>
+</li>
+<li><a href="https://images.shodan.io">Images</a>
+</li>
+<li><a href="https://monitor.shodan.io">Monitor</a>
+</li>
+<li><a href="https://developer.shodan.io">Developer</a>
+</li>
+<li><a href="https://www.shodan.io/about/products">More...</a>
+</li>
+</ul>
+</div>
+<div class="container u-full-width">
+<div class="row">
+<div class="twelve columns">
+<style>.searchbox {
+    font-family: Arial;
+}
+
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@media (max-width: 900px) {
+    .right-menu .menu-item-account {
+        display: none
+    }
+}
+</style>
+<div class="navbar">
+<input id="menu-btn" type="checkbox" class="menu-btn" />
+<label for="menu-btn" class="menu-icon"><span class="navicon"><i class="fa fa-bars  fa-fw "></i></span>
+</label><a href="/" class="title"><img src="/static/img/logo.png" alt="Shodan" width="112" height="32" /></a>
+<ul class="menu sub-menu">
+<li><a href="/explore"><i class="fas fa-globe  fa-fw "></i>Explore</a>
+</li>
+<li><a href="https://account.shodan.io/billing" target="_blank" rel="noopener noreferrer"><i class="fas fa-briefcase  fa-fw "></i>Pricing
+<i style="font-size: 1.1rem" class="fa fa-external-link  fa-fw "></i></a>
+</li>
+</ul>
+<form action="/search" method="GET">
+<div class="searchbox">
+<div class="input-wrapper">
+<label for="search-query" value="Enter search query" class="visually-hidden"></label>
+<input type="text" name="query" placeholder="Search..." value="&#34;default password&#34;" autofocus="autofocus" autocapitalize="none" id="search-query" />
+</div>
+<button type="submit" aria-label="Submit search querxy" data-balloon-disable="data-balloon-disable" class="button-red"><i class="fas fa-search  fa-fw "></i>
+</button>
+</div>
+</form>
+<ul class="menu main-menu right-menu">
+<li><a href="/dashboard" class="highlight-success">Login</a>
+</li>
+</ul>
+</div>
+<script>(function() {
+    let $menuBtn = document.getElementById('menu-btn')
+    document.body.addEventListener('click', function(e) {
+        // Only check when the menu is open
+        if (!$menuBtn.checked) {
+            return
+        }
+
+        let elm = e.target
+        let showMenu = false
+        while (elm) {
+            // Ignore duplicated event
+            if (elm.classList.contains('menu-icon')) {
+                return
+            }
+
+            // Toggle menu when clicking on the menu icon
+            if (elm.id == 'menu-btn') {
+                showMenu = true
+                break
+            }
+            elm = elm.parentElement
+        }
+
+        $menuBtn.checked = showMenu
+    })
+})()
+</script>
+<div class="container">
+</div>
+</div>
+</div>
+</div><br /><br />
+<div class="container">
+<div class="row">
+<div class="twelve columns">
+<h5 class="heading-highlight u-pull-right"><span>Total: 778</span>
+</h5>
+<h3 style="display:inline-block; margin-right: 20px" class="heading-highlight"><span>Shodan Report</span>
+</h3><code>&#34;default password&#34;</code>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>General</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="eight columns card card-padding card-red">
+<div id="worldmap"></div>
+</div>
+<div class="four columns card card-padding card-red">
+<h1><i class="far fa-globe  fa-fw "></i><em>Countries</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+country%3A%22US%22" class="text-dark"><strong>United States</strong></a><span class="u-pull-right">144</span>
+</li>
+<li><a href="/search?query=%22default+password%22+country%3A%22ES%22" class="text-dark"><strong>Spain</strong></a><span class="u-pull-right">104</span>
+</li>
+<li><a href="/search?query=%22default+password%22+country%3A%22RU%22" class="text-dark"><strong>Russian Federation</strong></a><span class="u-pull-right">81</span>
+</li>
+<li><a href="/search?query=%22default+password%22+country%3A%22UA%22" class="text-dark"><strong>Ukraine</strong></a><span class="u-pull-right">50</span>
+</li>
+<li><a href="/search?query=%22default+password%22+country%3A%22AR%22" class="text-dark"><strong>Argentina</strong></a><span class="u-pull-right">39</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-blue">
+<h1><i class="far fa-sitemap  fa-fw "></i><em>Ports</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+port%3A%2210001%22" class="text-dark"><strong>10001</strong></a><span class="u-pull-right">508</span>
+</li>
+<li><a href="/search?query=%22default+password%22+port%3A%225984%22" class="text-dark"><strong>5984</strong></a><span class="u-pull-right">51</span>
+</li>
+<li><a href="/search?query=%22default+password%22+port%3A%228081%22" class="text-dark"><strong>8081</strong></a><span class="u-pull-right">36</span>
+</li>
+<li><a href="/search?query=%22default+password%22+port%3A%2250000%22" class="text-dark"><strong>50000</strong></a><span class="u-pull-right">32</span>
+</li>
+<li><a href="/search?query=%22default+password%22+port%3A%228001%22" class="text-dark"><strong>8001</strong></a><span class="u-pull-right">30</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=%22default+password%22&amp;facet=port" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-purple">
+<h1><i class="far fa-building  fa-fw "></i><em>Organization</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+org%3A%22OLE+COMUNICACION+S.L.%22" class="text-dark"><strong>OLE COMUNICACION S.L.</strong></a><span class="u-pull-right">72</span>
+</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Chunghwa+Telecom+Co.%2CLtd.%22" class="text-dark"><strong>Chunghwa Telecom Co.,Ltd.</strong></a><span class="u-pull-right">21</span>
+</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Linode%22" class="text-dark"><strong>Linode</strong></a><span class="u-pull-right">17</span>
+</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22South+Central+Rural+Telecommunications+Cooperative+Inc.%22" class="text-dark"><strong>South Central Rural Telecommunication...</strong></a><span class="u-pull-right">13</span>
+</li>
+<li><a href="/search?query=%22default+password%22+org%3A%22Ministry+of+Education+Computer+Center%22" class="text-dark"><strong>Ministry of Education Computer Center</strong></a><span class="u-pull-right">12</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=%22default+password%22&amp;facet=org" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-orange">
+<h1><i class="far fa-exclamation-triangle  fa-fw "></i><em>Vulnerabilities</em>
+</h1>
+<p>No information available.</p>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-light-purple">
+<h1><i class="far fa-store  fa-fw "></i><em>Products</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+product%3A%22LAP%22" class="text-dark"><strong>LAP</strong></a><span class="u-pull-right">142</span>
+</li>
+<li><a href="/search?query=%22default+password%22+product%3A%22LAP-HP%22" class="text-dark"><strong>LAP-HP</strong></a><span class="u-pull-right">67</span>
+</li>
+<li><a href="/search?query=%22default+password%22+product%3A%22LM5%22" class="text-dark"><strong>LM5</strong></a><span class="u-pull-right">62</span>
+</li>
+<li><a href="/search?query=%22default+password%22+product%3A%22P5B-300%22" class="text-dark"><strong>P5B-300</strong></a><span class="u-pull-right">42</span>
+</li>
+<li><a href="/search?query=%22default+password%22+product%3A%22NB5%22" class="text-dark"><strong>NB5</strong></a><span class="u-pull-right">35</span>
+</li>
+<li style="margin-bottom:0" class="u-center"><a href="/search/facet?query=%22default+password%22&amp;facet=product" class="button">More...</a>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-red">
+<h1><i class="far fa-tags  fa-fw "></i><em>Tags</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+tag%3A%22compromised%22" class="text-dark"><strong>compromised</strong></a><span class="u-pull-right">516</span>
+</li>
+<li><a href="/search?query=%22default+password%22+tag%3A%22cloud%22" class="text-dark"><strong>cloud</strong></a><span class="u-pull-right">45</span>
+</li>
+<li><a href="/search?query=%22default+password%22+tag%3A%22self-signed%22" class="text-dark"><strong>self-signed</strong></a><span class="u-pull-right">34</span>
+</li>
+<li><a href="/search?query=%22default+password%22+tag%3A%22honeypot%22" class="text-dark"><strong>honeypot</strong></a><span class="u-pull-right">21</span>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-green">
+<h1><i class="far fa-microchip  fa-fw "></i><em>Operating Systems</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+os%3A%22Synology+DiskStation+Manager+%28DSM%29+7.0.1-42218%22" class="text-dark"><strong>Synology DiskStation Manager (DSM) 7....</strong></a><span class="u-pull-right">2</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>HTTP Insights</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-lighter-blue">
+<h1><em>Website Titles</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+http.title%3A%22401+Authorization+Required%22" class="text-dark"><strong>401 Authorization Required</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+http.title%3A%22Hello%22" class="text-dark"><strong>Hello</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+http.title%3A%22HTTP+Status+404+%C3%A2%E2%82%AC%E2%80%9C+Not+Found%22" class="text-dark"><strong>HTTP Status 404 â€“ Not Found</strong></a><span class="u-pull-right">1</span>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-light-blue">
+<h1><em>Web Technologies</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+http.component%3A%22ExtJS%22" class="text-dark"><strong>ExtJS</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+http.component%3A%22Synology+DiskStation%22" class="text-dark"><strong>Synology DiskStation</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+http.component%3A%22Vue.js%22" class="text-dark"><strong>Vue.js</strong></a><span class="u-pull-right">2</span>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-blue">
+<h1><em>Protocol Versions</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+ssl.alpn%3A%22http%2F1.1%22" class="text-dark"><strong>http/1.1</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.alpn%3A%22h2%22" class="text-dark"><strong>h2</strong></a><span class="u-pull-right">1</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="row">
+<div class="twelve columns">
+<h6 class="grid-heading"><span>SSL Insights</span>
+</h6>
+</div>
+</div>
+<div class="row">
+<div class="four columns card card-padding card-yellow">
+<h1><em>SSL/ TLS Versions</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+ssl.version%3A%22tlsv1.2%22" class="text-dark"><strong>tlsv1.2</strong></a><span class="u-pull-right">3</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.version%3A%22tlsv1%22" class="text-dark"><strong>tlsv1</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.version%3A%22tlsv1.1%22" class="text-dark"><strong>tlsv1.1</strong></a><span class="u-pull-right">2</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.version%3A%22tlsv1.3%22" class="text-dark"><strong>tlsv1.3</strong></a><span class="u-pull-right">1</span>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-orange">
+<h1><em>JARM Fingerprints</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+ssl.jarm%3A%2220d08b20d21d20d20c42d08b20b41d1ec49a4b64df0a9e9f328abd60285841%22" class="text-dark"><strong>20d08b20d21d20d20c42d08b20b41d1ec49a4...</strong></a><span class="u-pull-right">32</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.jarm%3A%2226d26d16d26d26d22c26d26d26d26dd7fc4c7c6ef19b77a4ca0787979cdc13%22" class="text-dark"><strong>26d26d16d26d26d22c26d26d26d26dd7fc4c7...</strong></a><span class="u-pull-right">1</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.jarm%3A%222ad2ad0002ad2ad22c2ad2ad2ad2adce7a321e4956e8298ba917e9f2c22849%22" class="text-dark"><strong>2ad2ad0002ad2ad22c2ad2ad2ad2adce7a321...</strong></a><span class="u-pull-right">1</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.jarm%3A%223fd3fd15d3fd3fd00042d42d000000038eaaf490bec8dc33757f165ce01762%22" class="text-dark"><strong>3fd3fd15d3fd3fd00042d42d000000038eaaf...</strong></a><span class="u-pull-right">1</span>
+</li>
+</ul>
+</div>
+<div class="four columns card card-padding card-red">
+<h1><em>JA3S Fingerprints</em>
+</h1>
+<ul class="normalize">
+<li><a href="/search?query=%22default+password%22+ssl.ja3s%3A%227770094a92b1cbfa5a6de2017cfb682a%22" class="text-dark"><strong>7770094a92b1cbfa5a6de2017cfb682a</strong></a><span class="u-pull-right">32</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.ja3s%3A%22303951d4c50efb2e991652225a6f02b1%22" class="text-dark"><strong>303951d4c50efb2e991652225a6f02b1</strong></a><span class="u-pull-right">1</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.ja3s%3A%22a70303593a393dfd863b76d9da6c3ace%22" class="text-dark"><strong>a70303593a393dfd863b76d9da6c3ace</strong></a><span class="u-pull-right">1</span>
+</li>
+<li><a href="/search?query=%22default+password%22+ssl.ja3s%3A%22e35df3e00ca4ef31d42b34bebaa2f86e%22" class="text-dark"><strong>e35df3e00ca4ef31d42b34bebaa2f86e</strong></a><span class="u-pull-right">1</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<br />
+<div class="container u-full-width bg-solid"><br /><br />
+<div class="container">
+<div class="row">
+<div class="three columns">
+<h6 class="grid-heading">Products</h6>
+<ul>
+<li><a href="https://monitor.shodan.io" class="light">Monitor</a>
+</li>
+<li><a href="https://beta.shodan.io" class="light">Search Engine</a>
+</li>
+<li><a href="https://developer.shodan.io" class="light">Developer API</a>
+</li>
+<li><a href="https://maps.shodan.io" class="light">Maps</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 style="visibility:hidden" class="grid-heading">&nbsp;</h6>
+<ul>
+<li><a href="https://enterprise.shodan.io" class="light">Bulk Data</a>
+</li>
+<li><a href="https://images.shodan.io" class="light">Images</a>
+</li>
+<li><a href="https://snippets.shodan.io" class="light">Snippets</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Pricing</h6>
+<ul>
+<li><a href="https://www.shodan.io/store/member" class="light">Membership</a>
+</li>
+<li><a href="https://developer.shodan.io/pricing" class="light">API Subscriptions</a>
+</li>
+<li><a href="https://enterprise.shodan.io" class="light">Enterprise</a>
+</li>
+</ul>
+</div>
+<div class="three columns">
+<h6 class="grid-heading">Contact Us</h6>
+<ul>
+<li><a href="mailto:support@shodan.io" class="light">support@shodan.io</a>
+</li>
+<li>
+<h5><a href="https://twitter.com/shodanhq" aria-label="Twitter" class="text-secondary"><i class="fab fa-twitter   "></i></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/company/shodan" aria-label="Linkedin" class="text-secondary"><i class="fab fa-linkedin   "></i></a>&nbsp;&nbsp;<a href="https://www.facebook.com/shodan.io" aria-label="Facebook" class="text-secondary"><i class="fab fa-facebook   "></i></a>
+</h5>
+</li>
+</ul>
+<p class="light">Shodan &reg; - All rights reserved</p>
+</div>
+</div>
+</div>
+</div>
+<script src="/static/jquery/jquery-3.4.1.slim.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="/static/jquery/jquery-jvectormap-world-mill-en.js"></script>
+<script>(function() {
+    function initWorldMap() {
+        $worldmap = $('#worldmap')
+        if (!$worldmap.length) {
+            return;
+        }
+
+        let worldmapdata = {"US": 144, "ES": 104, "RU": 81, "UA": 50, "AR": 39, "TW": 38, "BR": 31, "CA": 30, "IR": 29, "CN": 23, "IN": 18, "BG": 10, "BW": 10, "DE": 10, "TH": 10, "FR": 9, "AU": 8, "CO": 8, "CZ": 8, "GB": 7, "SE": 7, "IE": 6, "IT": 6, "JP": 6, "PL": 6, "SG": 5, "ZA": 5, "MX": 4, "MY": 4, "NL": 4, "RO": 4, "VN": 4, "AD": 3, "EC": 3, "HU": 3, "SK": 3, "VE": 3, "BA": 2, "BE": 2, "CL": 2, "EG": 2, "KE": 2, "LT": 2, "LV": 2, "PT": 2, "RS": 2, "TG": 2, "TZ": 2, "AL": 1, "AT": 1, "DK": 1, "FI": 1, "GE": 1, "GH": 1, "GU": 1, "ID": 1, "KZ": 1, "ME": 1, "PE": 1, "TR": 1};
+        $worldmap.empty();
+        $worldmap.vectorMap({
+            map: 'world_mill_en',
+            backgroundColor: 'transparent',
+            zoomOnScroll: false,
+            regionStyle: {
+                initial: {
+                    'stroke': '#404040',
+                    'stroke-width': 0.5,
+                    'stroke-opacity': 1,
+                },
+            },
+            series: {
+                regions: [{
+                    values: worldmapdata,
+                    scale: ['#FFDBDB', '#C60F13'],
+                    normalizeFunction: 'polynomial',
+                }],
+            },
+            onRegionLabelShow: function(event, label, code) {
+                let count = worldmapdata[code] || 0;
+                label.html(
+                    '<b>' + label.text() + '</b><br/>' +
+                    'Hosts: ' + count.toLocaleString(),
+                );
+            }
+        });
+    }
+
+    setTimeout(initWorldMap, 500);
+})()
+</script>
+</body>
+</html>
